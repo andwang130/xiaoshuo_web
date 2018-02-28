@@ -1,1 +1,1 @@
-使用tornado写的一个小说网站练练手，数据库使用的mysql，使用了sqlalchemy orm 模型，还使用了redis实现了session，和简单的缓存,
+使用tornado写的一个小说网站练练手，数据库使用的mysql，使用了sqlalchemy orm 模型，还使用了redis实现了session，和简单的缓存,前后端完全分离，没有使用模板渲染，渲染全部由前端的JS完成
