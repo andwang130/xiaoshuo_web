@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../static/css/contentv2_base.css">
+    <link rel="stylesheet" href="../../static/css/contentv2_index.css">
+    <script src="../../static/js/jQuery.js"></script>
+    <link rel="stylesheet" href="../../static/css/contentv2_book_manage.css">
+
+<style>
+    .page-box {
+    min-height: 40px;
+    text-align: center;
+}
+    .page-box {
+    padding-top: 20px;
+    padding-bottom: 0!important;
+}
+page-box .pagination {
+    display: inline-block;
+    overflow: hidden;
+}
+.pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+    .pagination {
+    display: inline-block;
+    padding-left: 0;
+    /* margin: 20px 0; */
+    border-radius: 4px;
+}
+    .page-box .pagination li a {
+    font: 14px/34px Arial;
+    float: left;
+    height: 34px;
+    padding: 0 12px;
+    transition: color .3s,border .3s;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+     <div class="header">
+    <div class="headBox pageCenter cf">
+      <a href="/index.html">
+        <img class="logo fl" src="https://img1.write.qq.com/writer/p1/contentv2/logo.png" width="225" height="28" alt="阅文·作家专区">
+      </a>
+      <div class="headUser fr">
+        <ul class="cf">
+
+          <li class="line"></li>
+          <li id="headPhotoBox" class="headPhoto">
+            <p><em><img src="https://img1.write.qq.com/writer/p1/contentv2/photo_default.png" width="36" height="36" alt=""></em><a class="userName" href="javascript:">v1列子御风</a></p>
+            <dl class="userBox">
+              <cite class="icon whiteSj"></cite>
+              <dd class="userInfo hidden">
+                  <!-- 增加身份标识"ico-level",silver为白金作家，dashen为大神作家 -->
+                <p class="name" title="v1列子御风">v1列子御风
+
+                </p>
+                <p class="level">
+
+                <span><em style="width:70%">0/0</em></span></p>
+              </dd>
+              <dd class="link end"><a href="/public/logout.html">退出登录</a></dd>
+            </dl>
+          </li>
+        </ul>
+      </div>
+    </div>
+</div>
+
+<!-- start banner -->
+
+<!-- end banner -->
+<!-- 黄条提示 -->
+<div id="warnTipBox" class="warningWrap" style="display:none;">
+    <div class="pageCenter">
+      <p><span class="icon alert"></span><span id="warnTip"></span></p>
+      <a id="warnTipCloseBtn" class="icon close" href="javascript:" title="关闭"></a></div>
+</div>
+<!--更改VIP管理密码-->
+<div id="modifyPwdPopup" class="popupWrap w380" style="display:none;">
+  <a data-node="closeBtn" class="icon closePopup" href="javascript:"></a>
+  <h3>更改VIP管理密码</h3>
+  <div class="popupBody p30">
+    <div class="popupContent">
+      <p>原密码</p>
+      <p class="mb20">
+        <input data-node="originalPwdInput" class="longInput" type="password" value="">
+      </p>
+      <p>新密码</p>
+      <p class="mb20">
+        <input data-node="newPwdInput" class="longInput" type="password" value="">
+        <i class="f12 c999">6~16位英文、数字或特殊字符</i>
+      </p>
+
+      <p>再次输入新密码</p>
+      <p class="mb20">
+        <input data-node="repeatNewPwdInput" class="longInput" type="password" value="">
+      </p>
+    </div>
+    <center class="confirmBtn">
+        <a data-node="submitBtn" class="button full" href="javascript:">提交</a>
+    </center>
+  </div>
+</div>
+    <div class="mainWrap pageCenter cf">
+        <div id="leftNav" class="mainLeft fl" style="visibility: visible;">
+            <div class="sideBar" id="main-bar">
+                  <ul>
+                      <li>
+                        <a href="/authon/index.html"><span class="home"></span>专区首页</a>
+                    </li>
+                    <li class="act">
+                        <a href="/authon/novels.html"><span class="works"></span>作品管理</a>
+                    </li>
+                    <li><a href="/authon/takeindex.html"><span class="data-icon"></span>数据统计</a>
+                          <!-- start 工具栏提示 -->
+                                          </li>
+                    <!---->
+                    <li>
+                        <a href="/authon/income.html"><span class="income"></span>稿酬收入</a>
+                    </li>
+                      </ul>
+            </div>
+
+            <!-- start 小屏下的列表-->
+            <div class="sideBar min-bar" id="min-bar">
+                  <ul>
+                      <li>
+                        <a href="/authon/index.html"><span class="home"></span>专区首页</a>
+                    </li>
+                    <li class="act">
+                        <a href="/authon/novels.html"><span class="works"></span>作品管理</a>
+                    </li>
+                    <li><a href="/authon/takeindex.html"><span class="data-icon"></span>数据统计</a>
+                          <!-- start 工具栏提示 -->
+                                          </li>
+                    <!---->
+                    <li>
+                        <a href="/authon/income.html"><span class="income"></span>稿酬收入</a>
+                    </li>
+                      </ul>
+            </div>
+            <!-- end 小屏下的列表-->
+        </div>
+
+<div class="mainRight fl">
+        <div class="crumbsWrap">
+        <i><span>作品管理</span></i>
+    </div>
+    <div class="msgBoxTitle">
+        <p class="f12 c555">当前作品总数<span id="bookCount" class="blue Num">1</span>本</p>
+        <a id="createNovelBtn" href="/authon/createsite.html" class="create button"><em class="icon"></em>创建作品</a>
+           </div>
+         <!-- 存在作品 -->
+    <div id="bookManageExist" class="worksCtrlWrap">
+        <div class="worksListWrap mb20">
+            <table class="worklist-table" width="100%" border="0" cellspacing="0">
+                <colgroup>
+                    <col width="32px">
+                    <col width="220px">
+                    <col width="240px">
+                    <col width="100px">
+                    <col width="60px">
+                    <col width="60px">
+                    <col width="160px">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th></th>
+                    <th class="tl">书名</th>
+                    <th class="tl">最新章节</th>
+                    <th class="center">编辑分组</th>
+                    <th>收藏</th>
+                    <th>状态</th>
+                    <th class="center">操作</th>
+                </tr>
+                </thead>
+                <tbody id="novelList"><tr class="active"><td></td><td class="tl"><div class="work-photo"><a href="https://write.qq.com/jump/url.html?token=AGUMdVstViNaP1EvUihQcgx6VSQJKwIoCGBRZgBtBWYMbwwvUDFWPAAyBXtSRQ40DGILZgwvBW8PPgdlUGUCMwA5DDhbYVZlWjJRLlJmUHYMfVUr" target="_blank"><img src="https://ccstatic-1252317822.file.myqcloud.com/bookcoverimg/2018-02-11/default_5a7fef190dce2.png" width="83" height="108" alt="作品封面"></a></div><p class="work-name"><a href="https://write.qq.com/jump/url.html?token=AGUMdVstViNaP1EvUihQcgx6VSQJKwIoCGBRZgBtBWYMbwwvUDFWPAAyBXtSRQ40DGILZgwvBW8PPgdlUGUCMwA5DDhbYVZlWjJRLlJmUHYMfVUr" target="_blank">sqlalcemy学习</a></p></td><td class="tl"><a href="javascript:">无最新章节</a></td><td><em>玄幻编辑组</em></td><td><em class="Num">0</em></td><td>新建</td><td><div class="dib-wrap"><a class="button blue"  href="/authon/addtype.html?bookid=1"><span class="icon"></span><i>写新章节</i></a><a class="button white" url-chapter="/booknovels/chaptermanage/CBID/9829212004976303.html" data-catid="20001" href="javascript:"><span class="icon"></span><i>已发布章节</i></a></div></td></tr></tbody>
+            </table>
+        </div>
+        <!-- 翻页组件 -->
+
+    </div>
+        <div id="pager" class="page-box cf" style="display: block;"></div>
+    <!-- 没有作品 -->
+    <div id="bookManageNone" class="worksCtrlWrap hidden">
+        <div class="null">
+            <img src="https://img1.write.qq.com/writer/p1/src/null.png" width="204" height="148">
+            <p>你没有发布任何作品，<a class="button" id="createNovelBtn2" href="/contentv2/booknovels/createsite">创建作品</a></p>
+        </div>
+    </div>
+    <!-- start 操作确认-->
+    <div class="popupWrap w450 hidden" id="confirm-pop" style="position: fixed;z-index: 10000;left:50%; top:50%; margin: -150px 0 0 -250px"><a class="icon closePopup" href="javascript:"></a>
+        <h3>申诉解禁申请</h3>
+        <div class="popupBody p30">
+            <div class="popupContent text-area">
+                <p>屏蔽时间：<span id="lockTime"></span></p>
+                <p>请填写作品申诉内容，我们将会在15个工作日内审核答复</p>
+                <textarea class="clearText" placeholder="请详细描述你需要申请解禁作品的原因，包括但不限于作品违规内容已修改等事由" def="请详细描述你需要申请解禁作品的原因，包括但不限于作品违规内容已修改等事由" id="clearText"></textarea>
+                <p class="error-tip"></p>
+            </div>
+            <div class="confirmBtn">
+                <a class="button ok" href="javascript:">确认</a>
+                <a class="button white cancal" href="javascript:">取消</a>
+            </div>
+        </div>
+    </div>
+    <!-- end 操作确认-->
+    <!-- start 投稿成功-->
+<div class="popupWrap w450 hidden" id="maskArticlePopup">
+    <a class="icon closePopup" href="javascript:" data-node="close"></a>
+    <div class="popupBody p30">
+        <div class="popupContent centerTip">
+            <div class="icon-box success">
+                <div class="icon"></div>
+            </div>
+            <div class="contribute-tip">
+                <h4>投稿成功</h4>
+                <p>你可以在「作品管理」- 「征文活动」中查看征文相关消息</p>
+                <div class="work-state">
+                    <div class="work-box cf">
+                        <img src="" data-node="img">
+                        <div class="work-info">
+                            <p>投稿作品：<span data-node="title"></span></p>
+                            <p>投稿时间：<span data-node="date"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end 投稿成功-->
+
+    <!-- start 选择作品分类 弹窗 -->
+    <div class="popup-wrap" id="novelTypePopup" style="display: none">
+        <a class="close icon" href="javascript:"></a>
+        <div class="popup-title">
+            <h3>选择作品分类</h3>
+        </div>
+        <div class="popup-content">
+            <div class="select-type" id="j-selectType">
+                <ul class="cf">
+                    <li>
+                        <cite></cite>
+                        <div class="box">
+                            <input type="hidden" name="type" value="1">
+                            <div class="ds-icon stand"></div>
+                            <h3>标准小说</h3>
+                            <p>传统的按章节推进情节的小说</p>
+                        </div>
+                    </li>
+                    <li class="act">
+                        <cite></cite>
+                        <div class="box">
+                            <input type="hidden" name="type" value="2">
+                            <div class="ds-icon dialog"></div>
+                            <h3>对话小说</h3>
+                            <p>新颖的以聊天对话形式推进的小说</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="popup-btn">
+            <a id="novelTypeCancel" href="javascript:">取消</a>
+            <a id="novelTypeConfirm" href="javascript:">确认</a>
+        </div>
+    </div>
+    <!-- end 选择作品分类 弹窗 -->
+<img id="requestLoadingTip" class="loadImg" style="display: none;" src="https://img1.write.qq.com/writer/p1/contentv2/loading.gif"></div>
+    </div>
+
+</div>
+<script src="../../static/js/view_js/authon_login_chek.js"></script>
+    <script src="../../static/js/view_js/novels.js"></script>
+</body>
+</html>

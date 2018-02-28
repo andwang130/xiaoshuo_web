@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <link rel="stylesheet" href="../../static/css/contentv2_base.css">
+    <link rel="stylesheet" href="../../static/css/contentv2_index.css">
+    <script src="../../static/js/jQuery.js"></script>
+    <link rel="stylesheet" href="../../static/css/contentv2_book_manage.css">
+
+
+</head>
+<body>
+<div class="wrap">
+     <div class="header">
+    <div class="headBox pageCenter cf">
+      <a href="/index.html">
+        <img class="logo fl" src="https://img1.write.qq.com/writer/p1/contentv2/logo.png" width="225" height="28" alt="阅文·作家专区">
+      </a>
+      <div class="headUser fr">
+        <ul class="cf">
+
+          <li class="line"></li>
+          <li id="headPhotoBox" class="headPhoto">
+            <p><em><img src="https://img1.write.qq.com/writer/p1/contentv2/photo_default.png" width="36" height="36" alt=""></em><a class="userName" href="javascript:">v1列子御风</a></p>
+            <dl class="userBox">
+              <cite class="icon whiteSj"></cite>
+              <dd class="userInfo hidden">
+                  <!-- 增加身份标识"ico-level",silver为白金作家，dashen为大神作家 -->
+                <p class="name" title="v1列子御风">v1列子御风
+
+                </p>
+                <p class="level">
+
+                <span><em style="width:70%">0/0</em></span></p>
+              </dd>
+              <dd class="link end"><a href="/public/logout.html">退出登录</a></dd>
+            </dl>
+          </li>
+        </ul>
+      </div>
+    </div>
+</div>
+</div>
+<!-- start banner -->
+
+<!-- end banner -->
+<!-- 黄条提示 -->
+<div id="warnTipBox" class="warningWrap" style="display:none;">
+    <div class="pageCenter">
+      <p><span class="icon alert"></span><span id="warnTip"></span></p>
+      <a id="warnTipCloseBtn" class="icon close" href="javascript:" title="关闭"></a></div>
+</div>
+<!--更改VIP管理密码-->
+<div id="modifyPwdPopup" class="popupWrap w380" style="display:none;">
+  <a data-node="closeBtn" class="icon closePopup" href="javascript:"></a>
+  <h3>更改VIP管理密码</h3>
+  <div class="popupBody p30">
+    <div class="popupContent">
+      <p>原密码</p>
+      <p class="mb20">
+        <input data-node="originalPwdInput" class="longInput" type="password" value="">
+      </p>
+      <p>新密码</p>
+      <p class="mb20">
+        <input data-node="newPwdInput" class="longInput" type="password" value="">
+        <i class="f12 c999">6~16位英文、数字或特殊字符</i>
+      </p>
+
+      <p>再次输入新密码</p>
+      <p class="mb20">
+        <input data-node="repeatNewPwdInput" class="longInput" type="password" value="">
+      </p>
+    </div>
+    <center class="confirmBtn">
+        <a data-node="submitBtn" class="button full" href="javascript:">提交</a>
+    </center>
+  </div>
+</div>
+    <div class="mainWrap pageCenter cf">
+        <div id="leftNav" class="mainLeft fl" style="visibility: visible;">
+            <div class="sideBar" id="main-bar">
+                  <ul>
+                      <li>
+                        <a href="/authon/index.html"><span class="home"></span>专区首页</a>
+                    </li>
+                    <li class="act">
+                        <a href="/authon/novels.html"><span class="works"></span>作品管理</a>
+                    </li>
+                    <li><a href="/authon/takeindex.html"><span class="data-icon"></span>数据统计</a>
+                          <!-- start 工具栏提示 -->
+                                          </li>
+                    <!---->
+                    <li>
+                        <a href="/authon/income.html"><span class="income"></span>稿酬收入</a>
+                    </li>
+                      </ul>
+            </div>
+
+            <!-- start 小屏下的列表-->
+            <div class="sideBar min-bar" id="min-bar">
+                <ul>
+                    <li>
+                    <a class="min-link" href="/index.html"><span class="icon home"></span></a>
+                    <a class="expand" href="/index.html">专区首页</a>
+                    </li>
+                    <li class="act">
+                        <a class="min-link" href="/booknovels/novels.html"><span class="icon works"></span></a>
+                        <a class="expand" href="/booknovels/novels.html">作品管理</a>
+                    </li>
+
+                    <li>
+                        <a class="min-link" href="/booknovelsvip/takeindex.html"><span class="icon reserve"></span></a>
+                        <a class="expand" href="/booknovelsvip/takeindex.html">数据统计</a>
+                    </li>
+
+
+                    <li>
+                        <a class="min-link" href="/income/index.html"><span class="icon income"></span></a>
+                        <a class="expand" href="/income/index.html">稿酬收入</a>
+                    </li>
+                    <li>
+                        <a class="min-link" href="/labor.html"><span class="icon labour"></span></a>
+                        <a class="expand" href="/labor.html">劳务收入</a>
+                    </li>
+
+
+                    <li>
+                        <a class="min-link" href="/authors/authorconsultlist.html"><span class="icon counsel"></span></a>
+                        <a class="expand" href="/authors/authorconsultlist.html">作家咨询</a>
+                    </li>
+
+                    <li>
+                        <a class="min-link" href="/integral_exchange/exchange.html"><span class="icon exchange"></span></a>
+                        <a class="expand" href="/integral_exchange/exchange.html">积分兑换</a>
+                    </li>
+                    <li>
+                        <a class="min-link" href="/interactivechapter/index.html"><span class="icon active"></span></a>
+                        <a class="expand" href="/interactivechapter/index.html">互动管理</a>
+                    </li>
+
+                    <!--微信管理-->
+                </ul>
+            </div>
+            <!-- end 小屏下的列表-->
+
+        </div>
+
+
+        <div class="mainRight pb260 fl">
+        <div class="crumbsWrap"><b></b><i class="before"><span><a href="/authon/novels.html">作品管理</a></span></i><em class="diff"></em><i class="current"><span>作品创建</span></i></div>
+        <center class="stepTitle">
+        <span class="act">1</span><em class="actText">选择类型</em><i class="icon nogt"></i><span>2</span><em>完善作品信息</em><i class="icon nogt"></i><span>3</span><em>创建成功</em>
+    </center>
+    <div class="workStepList step1">
+        <form id="createBookForm">
+                        <ul>
+                <li><em>目标读者</em>
+                                <span class="radio" id="nansheng">
+                    <input name="target"  id="boy" type="radio" value="1">
+                </span>
+                <label for="boy">男生</label>
+                <p class="tip">以男性视角或男性受众为主的作品，玄幻/奇幻/历史/都市/灵异/仙侠/游戏/二次元/武侠/军事等所有男生题材</p>
+             	                                <span class="radio on" id="nvsheng">
+                    <input name="target"  id="girl" type="radio" value="2" checked="checked">
+                </span>
+                <label for="girl">女生</label>
+                <p class="tip">以女性视角或女性受众为主的作品，古言/现言/玄幻/青春/悬疑/科幻/仙侠/游戏/N次元等所有女生题材</p>
+                                </li>
+            </ul>
+            <div class="stepBtn"><a class="button" id="submitCreatebook" href="javascript:">下一步</a></div>
+            <input type="hidden" name="artidx" value="0">
+            <input type="hidden" name="selectid" value="0">
+        <input type="hidden" name="__hash__" value="17b295431e1030e6048dfabd12b9a6bc_98b449fc5f6af1f97e76c8d73842b775"></form>
+    </div>
+
+
+
+
+
+    <script src="../../static/js/view_js/authon_login_chek.js"></script>
+    <script src="../../static/js/view_js/createsites.js"></script>
+
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../static/css/contentv2_base.css">
+    <link rel="stylesheet" href="../../static/css/contentv2_index.css">
+    <script src="../../static/js/jQuery.js"></script>
+
+<style>
+    .page-box {
+    min-height: 40px;
+    text-align: center;
+}
+    .page-box {
+    padding-top: 20px;
+    padding-bottom: 0!important;
+}
+page-box .pagination {
+    display: inline-block;
+    overflow: hidden;
+}
+.pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+    .pagination {
+    display: inline-block;
+    padding-left: 0;
+    /* margin: 20px 0; */
+    border-radius: 4px;
+}
+    .page-box .pagination li a {
+    font: 14px/34px Arial;
+    float: left;
+    height: 34px;
+    padding: 0 12px;
+    transition: color .3s,border .3s;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+     <div class="header">
+    <div class="headBox pageCenter cf">
+      <a href="/index.html">
+        <img class="logo fl" src="https://img1.write.qq.com/writer/p1/contentv2/logo.png" width="225" height="28" alt="阅文·作家专区">
+      </a>
+      <div class="headUser fr">
+        <ul class="cf">
+
+          <li class="line"></li>
+          <li id="headPhotoBox" class="headPhoto">
+            <p><em><img src="https://img1.write.qq.com/writer/p1/contentv2/photo_default.png" width="36" height="36" alt=""></em><a class="userName" href="javascript:">v1列子御风</a></p>
+            <dl class="userBox">
+              <cite class="icon whiteSj"></cite>
+              <dd class="userInfo hidden">
+                  <!-- 增加身份标识"ico-level",silver为白金作家，dashen为大神作家 -->
+                <p class="name" title="v1列子御风">v1列子御风
+
+                </p>
+                <p class="level">
+
+                <span><em style="width:70%">0/0</em></span></p>
+              </dd>
+              <dd class="link end"><a href="/public/logout.html">退出登录</a></dd>
+            </dl>
+          </li>
+        </ul>
+      </div>
+    </div>
+</div>
+<!-- start banner -->
+
+<!-- end banner -->
+<!-- 黄条提示 -->
+<div id="warnTipBox" class="warningWrap" style="display:none;">
+    <div class="pageCenter">
+      <p><span class="icon alert"></span><span id="warnTip"></span></p>
+      <a id="warnTipCloseBtn" class="icon close" href="javascript:" title="关闭"></a></div>
+</div>
+<!--更改VIP管理密码-->
+<div id="modifyPwdPopup" class="popupWrap w380" style="display:none;">
+  <a data-node="closeBtn" class="icon closePopup" href="javascript:"></a>
+  <h3>更改VIP管理密码</h3>
+  <div class="popupBody p30">
+    <div class="popupContent">
+      <p>原密码</p>
+      <p class="mb20">
+        <input data-node="originalPwdInput" class="longInput" type="password" value="">
+      </p>
+      <p>新密码</p>
+      <p class="mb20">
+        <input data-node="newPwdInput" class="longInput" type="password" value="">
+        <i class="f12 c999">6~16位英文、数字或特殊字符</i>
+      </p>
+
+      <p>再次输入新密码</p>
+      <p class="mb20">
+        <input data-node="repeatNewPwdInput" class="longInput" type="password" value="">
+      </p>
+    </div>
+    <center class="confirmBtn">
+        <a data-node="submitBtn" class="button full" href="javascript:">提交</a>
+    </center>
+  </div>
+</div>
+    <div class="mainWrap pageCenter cf">
+        <div id="leftNav" class="mainLeft fl" style="visibility: visible;">
+            <div class="sideBar" id="main-bar">
+               <ul>
+                      <li>
+                        <a href="/authon/index.html"><span class="home"></span>专区首页</a>
+                    </li>
+                    <li>
+                        <a href="/authon/novels.html"><span class="works"></span>作品管理</a>
+                    </li>
+                    <li><a href="/authon/takeindex.html"><span class="data-icon"></span>数据统计</a>
+                          <!-- start 工具栏提示 -->
+                                          </li>
+                    <!---->
+                    <li class="act">
+                        <a href="/authon/income.html"><span class="income"></span>稿酬收入</a>
+                    </li>
+                      </ul>
+            </div>
+
+            <!-- start 小屏下的列表-->
+            <div class="sideBar min-bar" id="min-bar">
+                <ul>
+                    <li>
+                    <a class="min-link" href="/index.html"><span class="icon home"></span></a>
+                    <a class="expand" href="/index.html">专区首页</a>
+                    </li>
+                    <li>
+                        <a class="min-link" href="/booknovels/novels.html"><span class="icon works"></span></a>
+                        <a class="expand" href="/booknovels/novels.html">作品管理</a>
+                    </li>
+
+                    <li>
+                        <a class="min-link" href="/booknovelsvip/takeindex.html"><span class="icon reserve"></span></a>
+                        <a class="expand" href="/booknovelsvip/takeindex.html">数据统计</a>
+                    </li>
+
+
+                    <li>
+                        <a class="min-link" href="/income/index.html"><span class="icon income"></span></a>
+                        <a class="expand" href="/income/index.html">稿酬收入</a>
+                    </li>
+                    <li>
+                        <a class="min-link" href="/labor.html"><span class="icon labour"></span></a>
+                        <a class="expand" href="/labor.html">劳务收入</a>
+                    </li>
+
+
+                    <li>
+                        <a class="min-link" href="/authors/authorconsultlist.html"><span class="icon counsel"></span></a>
+                        <a class="expand" href="/authors/authorconsultlist.html">作家咨询</a>
+                    </li>
+
+                    <li>
+                        <a class="min-link" href="/integral_exchange/exchange.html"><span class="icon exchange"></span></a>
+                        <a class="expand" href="/integral_exchange/exchange.html">积分兑换</a>
+                    </li>
+                    <li>
+                        <a class="min-link" href="/interactivechapter/index.html"><span class="icon active"></span></a>
+                        <a class="expand" href="/interactivechapter/index.html">互动管理</a>
+                    </li>
+
+                    <!--微信管理-->
+                </ul>
+            </div>
+            <!-- end 小屏下的列表-->
+
+        </div>
+
+<div class="mainRight pb260 fl">
+<div class="crumbsWrap"> <i><span>收入管理</span></i> </div>
+<div class="tabSwitch cf">
+
+    <span class="act">
+        <a href="/income/index.html?tab=rewards">打赏明细</a>
+    </span>
+
+</div>
+<div class="incomeWrap">
+    <div class="filter-box income cf">
+      <em>查看：</em>
+      <div class="combo-select "><select name="novel" tabindex="-1">
+        <option value="0" selected="">请选择</option>
+        <option value="9829212004976303">sqlalcemy学习</option>
+      </select><div class="combo-arrow"></div><dl class="combo-dropdown"><dd class="option-item option-selected" data-index="0" data-value="0">请选择
+      </dd></dl><input type="text" value="" class="combo-input text-input"></div>
+
+
+      <a class="button" href="javascript:" id="searchBtn">查看</a>
+</div>
+
+<div class="reserveListWrap">
+    <h3 class="reserveTitle">
+        <em class="icon reward"></em>打赏明细
+    </h3>
+    <div class="detailWrap mb10">
+        <table class="detailTable" width="100%" border="0" cellspacing="0">
+            <colgroup>
+                <col width="33%">
+                <col width="33%">
+                <col width="33%">
+            </colgroup>
+            <thead>
+            <tr>
+                <th>打赏时间</th>
+                <th>打赏金额</th>
+                <th>备注</th>
+            </tr>
+            </thead>
+            <tbody id="incomeList" incometype="rewards">    <tr>
+        <td colspan="3">暂无任何数据</td>
+    </tr>
+</tbody>
+        </table>
+    </div>
+</div>
+    <div id="pager" class="page-box cf"></div>
+
+<!--打赏明细模板-->
+<textarea id="incomeListTpl" style="display:none;">    &lt;%each list as item index%&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;%= item.paytime.substr(0,16) %&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;%= !item.paymoney || parseFloat(item.paymoney)&lt;=0?'0':parseFloat(item.paymoney/100) %&gt;元&lt;/td&gt;
+        &lt;td&gt;&lt;%= item.remark %&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;%/each%&gt;
+</textarea>
+<!--打赏明细的无数据模板-->
+<textarea id="incomeEmptyListTpl" style="display:none;">    &lt;tr&gt;
+        &lt;td colspan="3"&gt;暂无任何数据&lt;/td&gt;
+    &lt;/tr&gt;
+</textarea></div>
+<img id="requestLoadingTip" class="loadImg" style="display: none;" src="https://img1.write.qq.com/writer/p1/contentv2/loading.gif"></div>
+
+    </div>
+    <div class="footer">
+	<div class="pageCenter">
+	<div id="contact-bubble" class="footer-bubble">
+		<em><i></i></em>
+		<ul>
+			<li><a target="_blank" href="http://kf.qidian.com/Default.aspx">联系起点客服</a></li>
+			<li><a target="_blank" href="http://kf.qq.com/product/chuangshi.html">联系创世客服</a></li>
+		</ul>
+    </div>
+            <a target="_blank" href="http://bbs.write.qq.com">作家论坛</a><span>|</span>
+		<a target="_blank" href="/about/help_center.html">帮助中心</a><span>|</span>
+		<a id="contact" href="javascript:;">联系客服</a><span>|</span><a target="_blank" href="http://join.book.qq.com/introduction.html">关于我们</a><span>|</span><a target="_blank" href="http://join.book.qq.com/social.html">诚聘英才</a><span>|</span><a target="_blank" href="/about/copyright.html">版权声明</a><span>|</span>Copyright
+		© 2018 All Rights Reserved 阅文集团 版权所有
+	</div>
+</div>
+<script src="../../static/js/view_js/authon_login_chek.js"></script>
+    <script src="../../static/js/view_js/income.js"></script>
+</div>
+</body>
+</html>

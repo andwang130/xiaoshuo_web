@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <link rel="stylesheet" href="../../static/css/contentv2_base.css">
+
+    <script src="../../static/js/jQuery.js"></script>
+    <link rel="stylesheet" href="../../static/css/contentv2_book_manage.css">
+
+
+</head>
+<body>
+<div class="wrap">
+     <div class="header">
+    <div class="headBox pageCenter cf">
+      <a href="/index.html">
+        <img class="logo fl" src="https://img1.write.qq.com/writer/p1/contentv2/logo.png" width="225" height="28" alt="阅文·作家专区">
+      </a>
+      <div class="headUser fr">
+        <ul class="cf">
+
+          <li class="line"></li>
+          <li id="headPhotoBox" class="headPhoto">
+            <p><em><img src="https://img1.write.qq.com/writer/p1/contentv2/photo_default.png" width="36" height="36" alt=""></em><a class="userName" href="javascript:">v1列子御风</a></p>
+            <dl class="userBox">
+              <cite class="icon whiteSj"></cite>
+              <dd class="userInfo hidden">
+                  <!-- 增加身份标识"ico-level",silver为白金作家，dashen为大神作家 -->
+                <p class="name" title="v1列子御风">v1列子御风
+
+                </p>
+                <p class="level">
+
+                <span><em style="width:70%">0/0</em></span></p>
+              </dd>
+              <dd class="link end"><a href="/public/logout.html">退出登录</a></dd>
+            </dl>
+          </li>
+        </ul>
+      </div>
+    </div>
+</div>
+</div>
+<!-- start banner -->
+
+<!-- end banner -->
+<!-- 黄条提示 -->
+<div id="warnTipBox" class="warningWrap" style="display:none;">
+    <div class="pageCenter">
+      <p><span class="icon alert"></span><span id="warnTip"></span></p>
+      <a id="warnTipCloseBtn" class="icon close" href="javascript:" title="关闭"></a></div>
+</div>
+<!--更改VIP管理密码-->
+<div id="modifyPwdPopup" class="popupWrap w380" style="display:none;">
+  <a data-node="closeBtn" class="icon closePopup" href="javascript:"></a>
+  <h3>更改VIP管理密码</h3>
+  <div class="popupBody p30">
+    <div class="popupContent">
+      <p>原密码</p>
+      <p class="mb20">
+        <input data-node="originalPwdInput" class="longInput" type="password" value="">
+      </p>
+      <p>新密码</p>
+      <p class="mb20">
+        <input data-node="newPwdInput" class="longInput" type="password" value="">
+        <i class="f12 c999">6~16位英文、数字或特殊字符</i>
+      </p>
+
+      <p>再次输入新密码</p>
+      <p class="mb20">
+        <input data-node="repeatNewPwdInput" class="longInput" type="password" value="">
+      </p>
+    </div>
+    <center class="confirmBtn">
+        <a data-node="submitBtn" class="button full" href="javascript:">提交</a>
+    </center>
+  </div>
+</div>
+    <div class="mainWrap pageCenter cf">
+        <div id="leftNav" class="mainLeft fl" style="visibility: visible;">
+            <div class="sideBar" id="main-bar">
+              <ul>
+                      <li>
+                        <a href="/authon/index.html"><span class="home"></span>专区首页</a>
+                    </li>
+                    <li class="act">
+                        <a href="/authon/novels.html"><span class="works"></span>作品管理</a>
+                    </li>
+                    <li><a href="/authon/takeindex.html"><span class="data-icon"></span>数据统计</a>
+                          <!-- start 工具栏提示 -->
+                                          </li>
+                    <!---->
+                    <li>
+                        <a href="/authon/income.html"><span class="income"></span>稿酬收入</a>
+                    </li>
+                      </ul>
+            </div>
+
+            <!-- start 小屏下的列表-->
+            <div class="sideBar min-bar" id="min-bar">
+                <ul>
+                    <li>
+                    <a class="min-link" href="/index.html"><span class="icon home"></span></a>
+                    <a class="expand" href="/index.html">专区首页</a>
+                    </li>
+                    <li class="act">
+                        <a class="min-link" href="/booknovels/novels.html"><span class="icon works"></span></a>
+                        <a class="expand" href="/booknovels/novels.html">作品管理</a>
+                    </li>
+
+                    <li>
+                        <a class="min-link" href="/booknovelsvip/takeindex.html"><span class="icon reserve"></span></a>
+                        <a class="expand" href="/booknovelsvip/takeindex.html">数据统计</a>
+                    </li>
+
+
+                    <li>
+                        <a class="min-link" href="/income/index.html"><span class="icon income"></span></a>
+                        <a class="expand" href="/income/index.html">稿酬收入</a>
+                    </li>
+                    <li>
+                        <a class="min-link" href="/labor.html"><span class="icon labour"></span></a>
+                        <a class="expand" href="/labor.html">劳务收入</a>
+                    </li>
+
+
+                    <li>
+                        <a class="min-link" href="/authors/authorconsultlist.html"><span class="icon counsel"></span></a>
+                        <a class="expand" href="/authors/authorconsultlist.html">作家咨询</a>
+                    </li>
+
+                    <li>
+                        <a class="min-link" href="/integral_exchange/exchange.html"><span class="icon exchange"></span></a>
+                        <a class="expand" href="/integral_exchange/exchange.html">积分兑换</a>
+                    </li>
+                    <li>
+                        <a class="min-link" href="/interactivechapter/index.html"><span class="icon active"></span></a>
+                        <a class="expand" href="/interactivechapter/index.html">互动管理</a>
+                    </li>
+
+                    <!--微信管理-->
+                </ul>
+            </div>
+            <!-- end 小屏下的列表-->
+
+        </div>
+
+<div class="mainRight pb0 fl">
+    <div class="crumbsWrap">
+        <b></b>
+        <i class="before"><a href="/booknovels/novels.html"><span>作品管理</span></a></i>
+        <em class="diff"></em>
+        <i class="current"><span>sqlalcemy学习</span></i>
+    </div>
+    <div class="msgBoxTitle">
+        <!--id="createDraftIconBtn"-->
+        <!--<span class="minTipBox"><b class="down"></b><cite class="icon close"></cite>点此按钮即可新建章节</span>-->
+        <div class="tabSwitch cf">
+            <span><a id="modify" href="/authon/bookmodify.html">作品设置</a></span>
+            <span><a id="addtype" href="/authon/addtype.html">添加章节</a></span>
+            <span class="act"><a id="allChapter" href="/authon/allChapter.html">所有章节</a></span>
+            <span><a id="recycle" href="/authon/recycle.html">回收站</a></span>
+        </div>
+    </div>
+  <div class="managerWrap cf">
+        <div class="mLeftList fl">
+            <div id="chapterListWrap" class="leftListWrap">
+                <div class="titleBox">
+                    <p>共 2 卷， 1 章</p>
+                </div>
+                <div class="sectionManage">
+                    <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 740px;">
+                        <div id="chapterList" class="sectionList volumeList" style="overflow: hidden; width: auto; height: 740px;">
+                        <ul>
+                                                 </ul>
+                    </div><div class="slimScrollBar" style="background: rgb(204, 204, 204); width: 10px; position: absolute; top: 0px; opacity: 1; display: none; border-radius: 0px; z-index: 99; right: -1px; height: 740px;"></div><div class="slimScrollRail" style="width: 10px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 0px; background: rgb(238, 238, 238); opacity: 1; z-index: 90; right: -1px;"></div></div>
+                </div>
+            <div id="sectionBubble" class="section-bubble" style="display: none;"><p></p><span class="icon"></span></div></div>
+        </div>
+        <!-- 查看/编辑章节 -->
+        <div id="chapterContainer" class="mRightContent fl" style="display: none;">
+
+            <!--查看章节-->
+            <div id="viewChapterBox" class="midWrap viewWrap hidden" style="display: block;">
+                <div class="sectionViewWrap">
+                        <div id="portamento_container" style="min-height: 48px; width: 809px;"><div id="viewChapterBtnBox" class="sectionBtnBox cf" data-slide="1" style="top: 0px;">
+                            <div class="titleBtn fr">
+                                <a id="applyChapterBan" class="button white" style="display:none" href="javascript:">申请解禁</a>
+                                <a id="deleteChapterBtn" class="button white" href="javascript:">删除</a>
+                            </div>
+                            <em class="c999">章节类型：</em>
+                            <b data-node="chapterTypeName">公众章节</b>
+                        </div></div>
+
+
+                        <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 640px;"><div id="sectionText" class="zwText" style="overflow: hidden; width: auto; height: 640px;">
+                            <h3 id="chapterTitle">fddsfdfa</h3>
+                            <div id="chapterContent"><p>　　sdfasdasdas</p><br></div>
+                        </div><div class="slimScrollBar" style="background: rgb(204, 204, 204); width: 7px; position: absolute; top: 0px; opacity: 1; display: none; border-radius: 0px; z-index: 99; right: 1px; height: 650px;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(238, 238, 238); opacity: 1; z-index: 90; right: 1px;"></div></div>
+
+                        <div class="authorSay">
+                            <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 81px;"><div id="authorSpeak" style="overflow: hidden; width: auto; height: 81px;"></div><div class="slimScrollBar" style="background: rgb(204, 204, 204); width: 7px; position: absolute; top: 0px; opacity: 1; display: block; border-radius: 0px; z-index: 99; right: 1px;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(238, 238, 238); opacity: 1; z-index: 90; right: 1px;"></div></div>
+                        </div>
+
+                </div>
+            </div>
+
+            <!-- 编辑章节 -->
+            <div id="editChapterBox" class="midWrap editWrap hidden" style="display: none;">
+                <div class="sectionViewWrap ">
+                    <div id="editChapterBtnBox" class="sectionBtnBox cf">
+                        <div class="titleBtn fr">
+                            <a id="checkContentWordsBtn" class="button white" href="javascript:">统计字数</a>
+                            <a id="saveChapterBtn" class="button save" href="javascript:"><span class="icon"></span>保存</a>
+                        </div>
+                        <em class="c999">章节类型：</em>
+                        <b data-node="chapterTypeName"></b>
+                    </div>
+                    <form id="formChapter" name="formChapter" method="post" action="/booksubmit/chapteraddsubmit.html">
+                        <input type="hidden" name="CBID" value="9829212004976303">
+                        <input id="typeHidden" type="hidden" name="type" value="update">
+                        <input id="chapterIdHidden" type="hidden" name="CCID" value="">
+                    <div class="zwText">
+                            <div id="sectionEdit">
+                                <input id="chapterTitleInput" name="chaptertitle" type="text" data-default="">
+                                <div class="tinyMCE-wrap" style="display: none;">
+                                    <div id="mceu_6" class="mce-tinymce mce-container mce-panel" hidefocus="1" tabindex="-1" role="application" style="visibility: hidden; border-width: 1px;"><div id="mceu_6-body" class="mce-container-body mce-stack-layout"><div id="mceu_7" class="mce-container mce-menubar mce-toolbar mce-stack-layout-item mce-first" role="menubar" style="border-width: 0px 0px 1px;"><div id="mceu_7-body" class="mce-container-body mce-flow-layout"><div id="mceu_8" class="mce-widget mce-btn mce-menubtn mce-flow-layout-item mce-first mce-btn-has-text" tabindex="-1" aria-labelledby="mceu_8" role="menuitem" aria-haspopup="true"><button id="mceu_8-open" role="presentation" type="button" tabindex="-1"><span class="mce-txt">文件</span> <i class="mce-caret"></i></button></div><div id="mceu_9" class="mce-widget mce-btn mce-menubtn mce-flow-layout-item mce-btn-has-text" tabindex="-1" aria-labelledby="mceu_9" role="menuitem" aria-haspopup="true"><button id="mceu_9-open" role="presentation" type="button" tabindex="-1"><span class="mce-txt">编辑</span> <i class="mce-caret"></i></button></div><div id="mceu_10" class="mce-widget mce-btn mce-menubtn mce-flow-layout-item mce-btn-has-text" tabindex="-1" aria-labelledby="mceu_10" role="menuitem" aria-haspopup="true"><button id="mceu_10-open" role="presentation" type="button" tabindex="-1"><span class="mce-txt">视图</span> <i class="mce-caret"></i></button></div><div id="mceu_11" class="mce-widget mce-btn mce-menubtn mce-flow-layout-item mce-last mce-btn-has-text" tabindex="-1" aria-labelledby="mceu_11" role="menuitem" aria-haspopup="true"><button id="mceu_11-open" role="presentation" type="button" tabindex="-1"><span class="mce-txt">格式</span> <i class="mce-caret"></i></button></div></div></div><div id="mceu_12" class="mce-toolbar-grp mce-container mce-panel mce-stack-layout-item" hidefocus="1" tabindex="-1" role="group"><div id="mceu_12-body" class="mce-container-body mce-stack-layout"><div id="mceu_13" class="mce-container mce-toolbar mce-stack-layout-item mce-first mce-last" role="toolbar"><div id="mceu_13-body" class="mce-container-body mce-flow-layout"><div id="mceu_14" class="mce-container mce-flow-layout-item mce-first mce-btn-group" role="group"><div id="mceu_14-body"><div id="mceu_0" class="mce-widget mce-btn mce-first" tabindex="-1" aria-labelledby="mceu_0" role="button" aria-label="标题"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-h"></i></button></div><div id="mceu_1" class="mce-widget mce-btn mce-last" tabindex="-1" aria-labelledby="mceu_1" role="button" aria-label="Bold"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-bold"></i></button></div></div></div><div id="mceu_15" class="mce-container mce-flow-layout-item mce-btn-group" role="group"><div id="mceu_15-body"><div id="mceu_2" class="mce-widget mce-btn mce-splitbtn mce-menubtn mce-first" role="button" tabindex="-1" aria-label="Bullet list" aria-haspopup="true"><button type="button" hidefocus="1" tabindex="-1"><i class="mce-ico mce-i-bullist"></i></button><button type="button" class="mce-open" hidefocus="1" tabindex="-1"> <i class="mce-caret"></i></button></div><div id="mceu_3" class="mce-widget mce-btn mce-last" tabindex="-1" aria-labelledby="mceu_3" role="button" aria-label="Blockquote"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-blockquote"></i></button></div></div></div><div id="mceu_16" class="mce-container mce-flow-layout-item mce-last mce-btn-group" role="group"><div id="mceu_16-body"><div id="mceu_4" class="mce-widget mce-btn mce-first" tabindex="-1" aria-labelledby="mceu_4" role="button" aria-label="插入图片"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-myimage"></i></button></div><div id="mceu_5" class="mce-widget mce-btn mce-last" tabindex="-1" aria-labelledby="mceu_5" role="button" aria-label="插入视频"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-myvideo"></i></button></div></div></div></div></div></div></div><div id="mceu_17" class="mce-edit-area mce-container mce-panel mce-stack-layout-item" hidefocus="1" tabindex="-1" role="group" style="border-width: 1px 0px 0px;"><iframe id="textMce_ifr" frameborder="0" allowtransparency="true" title="在编辑区按ALT-F9打开菜单，按ALT-F10打开工具栏，按ALT-0查看帮助" src='javascript:""' style="width: 100%; height: 500px; display: block;"></iframe></div><div id="mceu_18" class="mce-statusbar mce-container mce-panel mce-stack-layout-item mce-last" hidefocus="1" tabindex="-1" role="group" style="border-width: 1px 0px 0px;"><div id="mceu_18-body" class="mce-container-body mce-flow-layout"><div id="mceu_19" class="mce-path mce-flow-layout-item mce-first mce-last"><div role="button" class="mce-path-item mce-last" data-index="0" tabindex="-1" id="mceu_19-0" aria-level="1">p</div></div></div></div></div></div><textarea id="textMce" aria-hidden="true" style="display: none;">                                    </textarea>
+
+                                </div>
+                                <textarea name="content" id="chapterContentInput" style="display: none;" data-default="请输入正文"></textarea>
+                            </div>
+                    </div>
+                    <div class="say-area">
+                        <p><textarea id="authorSpeakInput" name="chapterextra" value="" data-default="作者的话（此段不计入字数）"></textarea></p>
+                    </div>
+                    <input type="hidden" name="__hash__" value="235bf40cfb04bf2d616b9738ab65982f_73cf8dd212028e2e6e8755066c9e86eb"></form>
+                </div>
+            </div>
+        </div>
+        <!--查看/编辑分卷-->
+        <div id="volumeContainer" class="mRightContent fl hidden" style="display: block;">
+            <!-- 查看分卷 -->
+            <div id="viewVolumeBox" class="hidden" style="display: block;">
+                <div class="sectionBtnBox cf">
+                    <div id="viewVolumeEdit" class="titleBtn fr">
+                        <a id="deleteVolumeBtn" class="button white" href="javascript:"><span class="icon"></span>删除</a>
+                        <a id="editVolumeBtn" class="button modify" href="javascript:"><span class="icon"></span>修改</a>
+                    </div>
+                </div>
+                <div class="newVolume">
+                    <h3><b data-node="volumeSortName">第一卷</b><span data-node="chapterCountBox">本卷章节 <em data-node="chapterCount">1</em> 章</span></h3>
+                </div>
+                <div class="volumeForm" data-node="viewContentBox">
+                    <ul>
+                        <li>
+                            <em>分卷名称</em>
+                            <p id="volumeTitle"></p>
+                        </li>
+                        <li>
+                            <em>分卷介绍</em>
+                            <p id="volumeDesc"></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 编辑分卷 -->
+            <div id="editVolumeBox" class="hidden" style="display: none;">
+                <div class="sectionBtnBox cf">
+                    <div class="titleBtn fr">
+                        <a id="saveVolumeBtn" class="button save" href="javascript:"><span class="icon"></span>保存</a>
+                    </div>
+                </div>
+                <div class="newVolume">
+                    <h3><b data-node="volumeSortName"></b><span id="chapterCountView">本卷章节<b data-node="chapterCount"></b>章</span></h3>
+                </div>
+                <div data-node="contentBox" class="volumeForm">
+                    <ul>
+                        <li>
+                            <em>分卷名称</em>
+                            <input id="volumeTitleInput" class="midInput" type="text">
+                        </li>
+                        <li>
+                            <em>分卷介绍</em>
+                            <textarea id="volumeDescInput"></textarea>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+<img id="requestLoadingTip" class="loadImg" style="display:none;" src="https://img1.write.qq.com/writer/p1/contentv2/loading.gif"></div>
+
+    </div>
+</div>
+
+
+
+<script src="../../static/js/view_js/authon_login_chek.js"></script>
+<script src="../../static/js/view_js/allChapter.js"></script>
+</body>
+</html>

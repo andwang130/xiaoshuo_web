@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../static/css/contentv2_base.css">
+    <link rel="stylesheet" href="../../static/css/contentv2_index.css">
+    <script src="../../static/js/jQuery.js"></script>
+
+</head>
+<body>
+<div class="wrap">
+    <div class="header">
+    <div class="headBox pageCenter cf">
+      <a href="/index.html">
+        <img class="logo fl" src="https://img1.write.qq.com/writer/p1/contentv2/logo.png" width="225" height="28" alt="阅文·作家专区">
+      </a>
+      <div class="headUser fr">
+        <ul class="cf">
+
+          <li class="line"></li>
+          <li id="headPhotoBox" class="headPhoto">
+            <p><em><img src="https://img1.write.qq.com/writer/p1/contentv2/photo_default.png" width="36" height="36" alt=""></em><a class="userName" href="javascript:">v1列子御风</a></p>
+            <dl class="userBox">
+              <cite class="icon whiteSj"></cite>
+              <dd class="userInfo hidden">
+                  <!-- 增加身份标识"ico-level",silver为白金作家，dashen为大神作家 -->
+                <p class="name" title="v1列子御风">v1列子御风
+
+                </p>
+                <p class="level">
+
+                <span><em style="width:70%">0/0</em></span></p>
+              </dd>
+              <dd class="link"><a href="/authors/person.html"><i>完整度68%</i>作家资料</a></dd>
+              <dd class="link end"><a href="/public/logout.html">退出登录</a></dd>
+            </dl>
+          </li>
+        </ul>
+      </div>
+    </div>
+</div>
+<!-- start banner -->
+
+<!-- end banner -->
+<!-- 黄条提示 -->
+<div id="warnTipBox" class="warningWrap" style="display:none;">
+    <div class="pageCenter">
+      <p><span class="icon alert"></span><span id="warnTip"></span></p>
+      <a id="warnTipCloseBtn" class="icon close" href="javascript:" title="关闭"></a></div>
+</div>
+<!--更改VIP管理密码-->
+<div id="modifyPwdPopup" class="popupWrap w380" style="display:none;">
+  <a data-node="closeBtn" class="icon closePopup" href="javascript:"></a>
+  <h3>更改VIP管理密码</h3>
+  <div class="popupBody p30">
+    <div class="popupContent">
+      <p>原密码</p>
+      <p class="mb20">
+        <input data-node="originalPwdInput" class="longInput" type="password" value="">
+      </p>
+      <p>新密码</p>
+      <p class="mb20">
+        <input data-node="newPwdInput" class="longInput" type="password" value="">
+        <i class="f12 c999">6~16位英文、数字或特殊字符</i>
+      </p>
+
+      <p>再次输入新密码</p>
+      <p class="mb20">
+        <input data-node="repeatNewPwdInput" class="longInput" type="password" value="">
+      </p>
+    </div>
+    <center class="confirmBtn">
+        <a data-node="submitBtn" class="button full" href="javascript:">提交</a>
+    </center>
+  </div>
+</div>
+    <div class="mainWrap pageCenter cf">
+        <div id="leftNav" class="mainLeft fl" style="visibility: visible;">
+            <div class="sideBar" id="main-bar">
+           <ul>
+                      <li>
+                        <a href="/authon/index.html"><span class="home"></span>专区首页</a>
+                    </li>
+                    <li>
+                        <a href="/authon/novels.html"><span class="works"></span>作品管理</a>
+                    </li>
+                    <li><a href="/authon/takeindex.html"><span class="data-icon"></span>数据统计</a>
+                          <!-- start 工具栏提示 -->
+                                          </li>
+                    <!---->
+                    <li>
+                        <a href="/authon/income.html"><span class="income"></span>稿酬收入</a>
+                    </li>
+                      </ul>
+            </div>
+
+            <!-- start 小屏下的列表-->
+            <div class="sideBar min-bar" id="min-bar">
+                   <ul>
+                      <li>
+                        <a href="/authon/index.html"><span class="home"></span>专区首页</a>
+                    </li>
+                    <li>
+                        <a href="/authon/novels.html"><span class="works"></span>作品管理</a>
+                    </li>
+                    <li><a href="/authon/takeindex.html"><span class="data-icon"></span>数据统计</a>
+                          <!-- start 工具栏提示 -->
+                                          </li>
+                    <!---->
+                    <li>
+                        <a href="/authon/income.html"><span class="income"></span>稿酬收入</a>
+                    </li>
+                      </ul>
+            </div>
+            <!-- end 小屏下的列表-->
+
+        </div>
+
+<link rel="stylesheet" type="text/css" href="https://sta1.write.qq.com/writer/0207181305/css/merge/contentv2_author_Data.css">  <div class="mainRight fl">
+      <div class="crumbsWrap"> <i><span>作家资料</span></i> </div>
+      <div class="msgBoxTitle">
+        <!--<div class="tabSwitch cf"> <span class="act"><a href="/authors/person/tab/personbaseinfo.html">基础信息</a></span><span ><a href="/authors/person/tab/personrealinfo.html">详细信息</a></span> </div>-->
+        <div class="tabSwitch cf">
+            <span class="act"><a href="/authors/person/tab/personbaseinfo.html">基础信息</a></span>
+            <span><a href="/authors/person/tab/personrealinfo.html">详细信息</a></span>
+                    </div>
+      </div>
+    <div class="tabWrap authorInfoForm">
+    	 <div class="baseInfo tabBox">
+    	 	<div class="infoListWrap">
+    <form id="formAuthorperson" name="formAuthorperson" method="post" action="/authors/selfupdate.html" enctype="multipart/form-data" novalidate="novalidate">
+      <ul>
+       <li class="headPhoto"><em>头像</em>
+          <div class="modifyBox">
+              <img id="previewImg" src="https://img1.write.qq.com/writer/p1/contentv2/photo_default.png" width="64" height="64" alt="">
+              <input type="hidden" name="headimg">
+<!--              <input id="coverFileBtn" name="imgFile" type="file" />-->
+<!--              <a id="selectPhotoBtn" class="button" href="javascript:">上传新头像</a>-->
+                  <input id="inputImage" class="file_upload button" value="上传新头像" type="button">
+              <i>*文件大小不超过5MB的jpg、png格式图片<br>*头像审核完毕后7天内不得再次上传<br>*头像审核中不得再次上传</i>
+            <input type="hidden" id="noUploadHeader" value="">
+          </div>
+          <div class="saveBox"><img src="https://img1.write.qq.com/writer/p1/contentv2/photo_default.png" width="64" height="64"></div>
+       </li>
+        <li><em>笔名</em>
+          <div class="modifyBox">
+                          <input class="midInput" id="authorNameInput" name="authorName" type="text" value="v1列子御风">
+              <p data-node="ok" style="display:none;">
+                <cite class="icon ok"></cite><i data-node="text" class="f12 c999"></i>
+              </p>
+              <p data-node="error" class="error"></p>
+                      </div>
+          <div class="saveBox">
+          v1列子御风
+                        </div>
+        </li>
+
+        <li><em>作家ID</em>9829172603514201</li>
+        <li><em>作家分组</em>808</li>
+        <li class="cf"><em>性别</em>
+          <div class="modifyBox"> <span class="radio on">
+        		<input id="boy" name="sex" class="radioclass" type="radio" checked="checked" value="1">
+      			</span>
+      			<label class="fl" for="boy">男</label>
+                  	<span class="radio ">
+                <input id="girl" name="sex" class="radioclass" type="radio" value="2">
+            </span>
+            <label class="fl" for="girl">女</label>
+          </div>
+          <div class="saveBox">男</div>
+        </li>
+        <li><em>真实姓名</em>
+          <div class="modifyBox">
+                      <input class="midInput" name="realName" type="text" value="王晶">
+            <cite data-node="ok" class="icon ok" style="display:none;"></cite>
+            <p data-node="error" class="error"></p>
+                    </div>
+          <div class="saveBox">王晶</div>
+        </li>
+        <li><em>证件</em>
+          <div class="modifyBox">
+                        <select class="w120" name="cardType" id="cardType">
+                <option value="0" selected="">身份证</option><option value="1">护照</option><option value="2">军官证</option><option value="3">学生证</option><option value="4">海外证件</option>
+            </select><input class="midInput w245" name="cardId" id="cardId" type="text" value="362425199408275213">
+            <cite data-node="ok" class="icon ok" style="display:none;"></cite>
+            <p data-node="error" class="error"></p>
+                      </div>
+          <div class="saveBox">
+           	身份证
+            362425199408275213
+                       </div>
+        </li>
+        <li><em>手机号码</em>
+          <div class="modifyBox">
+            <select class="w140" name="tel_pre" id="tel_pre">
+                <option value="+86" title="中国大陆" selected="">中国大陆&nbsp;&nbsp;&nbsp;&nbsp;+86</option><option value="+852" title="中国香港">中国香港&nbsp;&nbsp;&nbsp;&nbsp;+852</option><option value="+853" title="中国澳门">中国澳门&nbsp;&nbsp;&nbsp;&nbsp;+853</option><option value="+886" title="中国台湾">中国台湾&nbsp;&nbsp;&nbsp;&nbsp;+886</option><option value="+60" title="马来西亚">马来西亚&nbsp;&nbsp;&nbsp;&nbsp;+60</option><option value="+61" title="澳大利亚">澳大利亚&nbsp;&nbsp;&nbsp;&nbsp;+61</option><option value="+64" title="新西兰">新西兰&nbsp;&nbsp;&nbsp;&nbsp;+64</option><option value="+65" title="新加坡">新加坡&nbsp;&nbsp;&nbsp;&nbsp;+65</option><option value="+1" title="美国,加拿大">美国,加..&nbsp;&nbsp;+1</option><option value="+93" title="阿富汗">阿富汗&nbsp;&nbsp;&nbsp;&nbsp;+93</option><option value="+355" title="阿尔巴尼亚">阿尔巴尼..&nbsp;&nbsp;+355</option><option value="+213" title="阿尔及利亚">阿尔及利..&nbsp;&nbsp;+213</option><option value="+684" title="美属萨摩亚群岛">美属萨摩..&nbsp;&nbsp;+684</option><option value="+376" title="安道尔共和国">安道尔共..&nbsp;&nbsp;+376</option><option value="+244" title="安哥拉">安哥拉&nbsp;&nbsp;&nbsp;&nbsp;+244</option><option value="+1264" title="安圭拉岛">安圭拉岛&nbsp;&nbsp;&nbsp;&nbsp;+1264</option><option value="+54" title="阿根廷">阿根廷&nbsp;&nbsp;&nbsp;&nbsp;+54</option><option value="+374" title="亚美尼亚">亚美尼亚&nbsp;&nbsp;&nbsp;&nbsp;+374</option><option value="+297" title="阿鲁巴">阿鲁巴&nbsp;&nbsp;&nbsp;&nbsp;+297</option><option value="+43" title="奥地利">奥地利&nbsp;&nbsp;&nbsp;&nbsp;+43</option><option value="+994" title="阿塞拜疆">阿塞拜疆&nbsp;&nbsp;&nbsp;&nbsp;+994</option><option value="+1242" title="巴哈马">巴哈马&nbsp;&nbsp;&nbsp;&nbsp;+1242</option><option value="+973" title="巴林">巴林　&nbsp;&nbsp;&nbsp;&nbsp;+973</option><option value="+880" title="孟加拉共和国">孟加拉共..&nbsp;&nbsp;+880</option><option value="+1246" title="巴巴多斯">巴巴多斯&nbsp;&nbsp;&nbsp;&nbsp;+1246</option><option value="+375" title="白俄罗斯">白俄罗斯&nbsp;&nbsp;&nbsp;&nbsp;+375</option><option value="+32" title="比利时">比利时&nbsp;&nbsp;&nbsp;&nbsp;+32</option><option value="+501" title="伯利兹">伯利兹&nbsp;&nbsp;&nbsp;&nbsp;+501</option><option value="+229" title="贝宁">贝宁　&nbsp;&nbsp;&nbsp;&nbsp;+229</option><option value="+441" title="百慕大">百慕大&nbsp;&nbsp;&nbsp;&nbsp;+441</option><option value="+975" title="不丹">不丹　&nbsp;&nbsp;&nbsp;&nbsp;+975</option><option value="+591" title="玻利维亚">玻利维亚&nbsp;&nbsp;&nbsp;&nbsp;+591</option><option value="+387" title="波斯尼亚和黑塞哥维那">波斯尼亚..&nbsp;&nbsp;+387</option><option value="+267" title="博茨瓦那">博茨瓦那&nbsp;&nbsp;&nbsp;&nbsp;+267</option><option value="+55" title="巴西">巴西　&nbsp;&nbsp;&nbsp;&nbsp;+55</option><option value="+1284" title="英属维京群岛,英属维尔京群岛">英属维京..&nbsp;&nbsp;+1284</option><option value="+673" title="文莱">文莱　&nbsp;&nbsp;&nbsp;&nbsp;+673</option><option value="+359" title="保加利亚">保加利亚&nbsp;&nbsp;&nbsp;&nbsp;+359</option><option value="+226" title="布基纳法索国">布基纳法..&nbsp;&nbsp;+226</option><option value="+257" title="布隆迪">布隆迪&nbsp;&nbsp;&nbsp;&nbsp;+257</option><option value="+855" title="柬埔寨">柬埔寨&nbsp;&nbsp;&nbsp;&nbsp;+855</option><option value="+237" title="喀麦隆">喀麦隆&nbsp;&nbsp;&nbsp;&nbsp;+237</option><option value="+238" title="佛得角">佛得角&nbsp;&nbsp;&nbsp;&nbsp;+238</option><option value="+1345" title="开曼群岛">开曼群岛&nbsp;&nbsp;&nbsp;&nbsp;+1345</option><option value="+236" title="中非共和国">中非共和..&nbsp;&nbsp;+236</option><option value="+235" title="乍得">乍得　&nbsp;&nbsp;&nbsp;&nbsp;+235</option><option value="+56" title="智利">智利　&nbsp;&nbsp;&nbsp;&nbsp;+56</option><option value="+57" title="哥伦比亚">哥伦比亚&nbsp;&nbsp;&nbsp;&nbsp;+57</option><option value="+269" title="科摩洛">科摩洛&nbsp;&nbsp;&nbsp;&nbsp;+269</option><option value="+242" title="刚果">刚果　&nbsp;&nbsp;&nbsp;&nbsp;+242</option><option value="+243" title="刚果民主共和国">刚果民主..&nbsp;&nbsp;+243</option><option value="+682" title="库克群岛">库克群岛&nbsp;&nbsp;&nbsp;&nbsp;+682</option><option value="+506" title="哥斯达黎加">哥斯达黎..&nbsp;&nbsp;+506</option><option value="+225" title="科特迪瓦共和国 ">科特迪瓦..&nbsp;&nbsp;+225</option><option value="+385" title="克罗地亚共和国">克罗地亚..&nbsp;&nbsp;+385</option><option value="+53" title="古巴">古巴　&nbsp;&nbsp;&nbsp;&nbsp;+53</option><option value="+357" title="塞浦路斯">塞浦路斯&nbsp;&nbsp;&nbsp;&nbsp;+357</option><option value="+420" title="捷克共和国">捷克共和..&nbsp;&nbsp;+420</option><option value="+45" title="丹麦">丹麦　&nbsp;&nbsp;&nbsp;&nbsp;+45</option><option value="+253" title="吉布提">吉布提&nbsp;&nbsp;&nbsp;&nbsp;+253</option><option value="+1767" title="多米尼克">多米尼克&nbsp;&nbsp;&nbsp;&nbsp;+1767</option><option value="+1809" title="多明尼加共和国,圣马丁岛">多明尼加..&nbsp;&nbsp;+1809</option><option value="+670" title="东帝汶">东帝汶&nbsp;&nbsp;&nbsp;&nbsp;+670</option><option value="+593" title="厄瓜多尔">厄瓜多尔&nbsp;&nbsp;&nbsp;&nbsp;+593</option><option value="+20" title="埃及">埃及　&nbsp;&nbsp;&nbsp;&nbsp;+20</option><option value="+503" title="萨尔瓦多">萨尔瓦多&nbsp;&nbsp;&nbsp;&nbsp;+503</option><option value="+240" title="赤道几内亚">赤道几内..&nbsp;&nbsp;+240</option><option value="+372" title="爱沙尼亚">爱沙尼亚&nbsp;&nbsp;&nbsp;&nbsp;+372</option><option value="+251" title="埃塞俄比亚">埃塞俄比..&nbsp;&nbsp;+251</option><option value="+500" title="马尔维纳斯群岛">马尔维纳..&nbsp;&nbsp;+500</option><option value="+298" title="法罗群岛">法罗群岛&nbsp;&nbsp;&nbsp;&nbsp;+298</option><option value="+679" title="斐济">斐济　&nbsp;&nbsp;&nbsp;&nbsp;+679</option><option value="+358" title="芬兰">芬兰　&nbsp;&nbsp;&nbsp;&nbsp;+358</option><option value="+33" title="法国">法国　&nbsp;&nbsp;&nbsp;&nbsp;+33</option><option value="+594" title="法属圭亚那">法属圭亚..&nbsp;&nbsp;+594</option><option value="+689" title="法属波利尼西亚">法属波利..&nbsp;&nbsp;+689</option><option value="+809" title="法属西印度群岛">法属西印..&nbsp;&nbsp;+809</option><option value="+241" title="加蓬">加蓬　&nbsp;&nbsp;&nbsp;&nbsp;+241</option><option value="+220" title="冈比亚">冈比亚&nbsp;&nbsp;&nbsp;&nbsp;+220</option><option value="+995" title="格鲁吉亚">格鲁吉亚&nbsp;&nbsp;&nbsp;&nbsp;+995</option><option value="+49" title="德国">德国　&nbsp;&nbsp;&nbsp;&nbsp;+49</option><option value="+233" title="加纳">加纳　&nbsp;&nbsp;&nbsp;&nbsp;+233</option><option value="+350" title="直布罗陀">直布罗陀&nbsp;&nbsp;&nbsp;&nbsp;+350</option><option value="+30" title="希腊">希腊　&nbsp;&nbsp;&nbsp;&nbsp;+30</option><option value="+299" title="格陵兰岛">格陵兰岛&nbsp;&nbsp;&nbsp;&nbsp;+299</option><option value="+1473" title="格林纳达">格林纳达&nbsp;&nbsp;&nbsp;&nbsp;+1473</option><option value="+890" title="瓜德罗普岛">瓜德罗普..&nbsp;&nbsp;+890</option><option value="+1671" title="关岛">关岛　&nbsp;&nbsp;&nbsp;&nbsp;+1671</option><option value="+502" title="危地马拉">危地马拉&nbsp;&nbsp;&nbsp;&nbsp;+502</option><option value="+224" title="几内亚">几内亚&nbsp;&nbsp;&nbsp;&nbsp;+224</option><option value="+245" title="畿尼">畿尼　&nbsp;&nbsp;&nbsp;&nbsp;+245</option><option value="+592" title="圭亚那">圭亚那&nbsp;&nbsp;&nbsp;&nbsp;+592</option><option value="+509" title="海地">海地　&nbsp;&nbsp;&nbsp;&nbsp;+509</option><option value="+504" title="洪都拉斯">洪都拉斯&nbsp;&nbsp;&nbsp;&nbsp;+504</option><option value="+36" title="匈牙利">匈牙利&nbsp;&nbsp;&nbsp;&nbsp;+36</option><option value="+354" title="冰岛">冰岛　&nbsp;&nbsp;&nbsp;&nbsp;+354</option><option value="+91" title="印度">印度　&nbsp;&nbsp;&nbsp;&nbsp;+91</option><option value="+62" title="印度尼西亚">印度尼西..&nbsp;&nbsp;+62</option><option value="+98" title="伊朗">伊朗　&nbsp;&nbsp;&nbsp;&nbsp;+98</option><option value="+964" title="伊拉克">伊拉克&nbsp;&nbsp;&nbsp;&nbsp;+964</option><option value="+353" title="爱尔兰(岛)">爱尔兰(..&nbsp;&nbsp;+353</option><option value="+972" title="以色列">以色列&nbsp;&nbsp;&nbsp;&nbsp;+972</option><option value="+39" title="意大利">意大利&nbsp;&nbsp;&nbsp;&nbsp;+39</option><option value="+1876" title="牙买加">牙买加&nbsp;&nbsp;&nbsp;&nbsp;+1876</option><option value="+81" title="日本">日本　&nbsp;&nbsp;&nbsp;&nbsp;+81</option><option value="+962" title="约旦">约旦　&nbsp;&nbsp;&nbsp;&nbsp;+962</option><option value="+327" title="哈萨克斯坦">哈萨克斯..&nbsp;&nbsp;+327</option><option value="+254" title="肯尼亚">肯尼亚&nbsp;&nbsp;&nbsp;&nbsp;+254</option><option value="+965" title="科威特">科威特&nbsp;&nbsp;&nbsp;&nbsp;+965</option><option value="+331" title="吉尔吉斯斯坦">吉尔吉斯..&nbsp;&nbsp;+331</option><option value="+856" title="老挝">老挝　&nbsp;&nbsp;&nbsp;&nbsp;+856</option><option value="+371" title="拉脱维亚">拉脱维亚&nbsp;&nbsp;&nbsp;&nbsp;+371</option><option value="+961" title="黎巴嫩">黎巴嫩&nbsp;&nbsp;&nbsp;&nbsp;+961</option><option value="+266" title="莱索托">莱索托&nbsp;&nbsp;&nbsp;&nbsp;+266</option><option value="+231" title="利比里亚">利比里亚&nbsp;&nbsp;&nbsp;&nbsp;+231</option><option value="+218" title="利比亚">利比亚&nbsp;&nbsp;&nbsp;&nbsp;+218</option><option value="+423" title="列支敦士登">列支敦士..&nbsp;&nbsp;+423</option><option value="+370" title="立陶宛">立陶宛&nbsp;&nbsp;&nbsp;&nbsp;+370</option><option value="+352" title="卢森堡">卢森堡&nbsp;&nbsp;&nbsp;&nbsp;+352</option><option value="+389" title="马其顿">马其顿&nbsp;&nbsp;&nbsp;&nbsp;+389</option><option value="+261" title="马达加斯加">马达加斯..&nbsp;&nbsp;+261</option><option value="+265" title="马拉维">马拉维&nbsp;&nbsp;&nbsp;&nbsp;+265</option><option value="+960" title="马尔代夫">马尔代夫&nbsp;&nbsp;&nbsp;&nbsp;+960</option><option value="+223" title="马里">马里　&nbsp;&nbsp;&nbsp;&nbsp;+223</option><option value="+356" title="马耳他">马耳他&nbsp;&nbsp;&nbsp;&nbsp;+356</option><option value="+596" title="马提尼克岛">马提尼克..&nbsp;&nbsp;+596</option><option value="+222" title="毛里塔尼亚">毛里塔尼..&nbsp;&nbsp;+222</option><option value="+230" title="毛里求斯">毛里求斯&nbsp;&nbsp;&nbsp;&nbsp;+230</option><option value="+52" title="墨西哥">墨西哥&nbsp;&nbsp;&nbsp;&nbsp;+52</option><option value="+373" title="摩尔多瓦">摩尔多瓦&nbsp;&nbsp;&nbsp;&nbsp;+373</option><option value="+377" title="摩纳哥公国 ">摩纳哥公..&nbsp;&nbsp;+377</option><option value="+976" title="蒙古">蒙古　&nbsp;&nbsp;&nbsp;&nbsp;+976</option><option value="+382" title="黑山共和国">黑山共和..&nbsp;&nbsp;+382</option><option value="+1664" title="蒙特塞拉特">蒙特塞拉..&nbsp;&nbsp;+1664</option><option value="+212" title="摩洛哥">摩洛哥&nbsp;&nbsp;&nbsp;&nbsp;+212</option><option value="+258" title="莫桑比克">莫桑比克&nbsp;&nbsp;&nbsp;&nbsp;+258</option><option value="+264" title="纳米比亚">纳米比亚&nbsp;&nbsp;&nbsp;&nbsp;+264</option><option value="+977" title="尼泊尔">尼泊尔&nbsp;&nbsp;&nbsp;&nbsp;+977</option><option value="+31" title="荷兰">荷兰　&nbsp;&nbsp;&nbsp;&nbsp;+31</option><option value="+687" title="新喀里多尼亚岛">新喀里多..&nbsp;&nbsp;+687</option><option value="+505" title="尼加拉瓜">尼加拉瓜&nbsp;&nbsp;&nbsp;&nbsp;+505</option><option value="+227" title="尼日尔">尼日尔&nbsp;&nbsp;&nbsp;&nbsp;+227</option><option value="+234" title="尼日利亚">尼日利亚&nbsp;&nbsp;&nbsp;&nbsp;+234</option><option value="+47" title="挪威">挪威　&nbsp;&nbsp;&nbsp;&nbsp;+47</option><option value="+968" title="阿曼">阿曼　&nbsp;&nbsp;&nbsp;&nbsp;+968</option><option value="+92" title="巴基斯坦">巴基斯坦&nbsp;&nbsp;&nbsp;&nbsp;+92</option><option value="+970" title="巴勒斯坦">巴勒斯坦&nbsp;&nbsp;&nbsp;&nbsp;+970</option><option value="+507" title="巴拿马">巴拿马&nbsp;&nbsp;&nbsp;&nbsp;+507</option><option value="+675" title="巴布亚新几内亚">巴布亚新..&nbsp;&nbsp;+675</option><option value="+595" title="巴拉圭">巴拉圭&nbsp;&nbsp;&nbsp;&nbsp;+595</option><option value="+51" title="秘鲁">秘鲁　&nbsp;&nbsp;&nbsp;&nbsp;+51</option><option value="+63" title="菲律宾">菲律宾&nbsp;&nbsp;&nbsp;&nbsp;+63</option><option value="+48" title="波兰">波兰　&nbsp;&nbsp;&nbsp;&nbsp;+48</option><option value="+351" title="葡萄牙">葡萄牙&nbsp;&nbsp;&nbsp;&nbsp;+351</option><option value="+1787" title="波多黎各">波多黎各&nbsp;&nbsp;&nbsp;&nbsp;+1787</option><option value="+974" title="卡塔尔">卡塔尔&nbsp;&nbsp;&nbsp;&nbsp;+974</option><option value="+262" title="留尼汪">留尼汪&nbsp;&nbsp;&nbsp;&nbsp;+262</option><option value="+40" title="罗马尼亚">罗马尼亚&nbsp;&nbsp;&nbsp;&nbsp;+40</option><option value="+7" title="俄罗斯">俄罗斯&nbsp;&nbsp;&nbsp;&nbsp;+7</option><option value="+250" title="卢旺达">卢旺达&nbsp;&nbsp;&nbsp;&nbsp;+250</option><option value="+1758" title="圣露西亚">圣露西亚&nbsp;&nbsp;&nbsp;&nbsp;+1758</option><option value="+784" title="圣文森特和格林纳丁斯">圣文森特..&nbsp;&nbsp;+784</option><option value="+685" title="萨摩亚">萨摩亚&nbsp;&nbsp;&nbsp;&nbsp;+685</option><option value="+239" title="圣多美和普林西比民主共和国">圣多美和..&nbsp;&nbsp;+239</option><option value="+966" title="沙特阿拉伯">沙特阿拉..&nbsp;&nbsp;+966</option><option value="+221" title="l塞内加尔">l塞内加..&nbsp;&nbsp;+221</option><option value="+381" title="塞尔维亚共和国">塞尔维亚..&nbsp;&nbsp;+381</option><option value="+248" title="塞舌尔群岛">塞舌尔群..&nbsp;&nbsp;+248</option><option value="+232" title="塞拉利昂">塞拉利昂&nbsp;&nbsp;&nbsp;&nbsp;+232</option><option value="+421" title="斯洛伐克">斯洛伐克&nbsp;&nbsp;&nbsp;&nbsp;+421</option><option value="+386" title="斯洛文尼亚">斯洛文尼..&nbsp;&nbsp;+386</option><option value="+677" title="所罗门群岛">所罗门群..&nbsp;&nbsp;+677</option><option value="+250" title="索马里">索马里&nbsp;&nbsp;&nbsp;&nbsp;+250</option><option value="+27" title="南非">南非　&nbsp;&nbsp;&nbsp;&nbsp;+27</option><option value="+82" title="韩国">韩国　&nbsp;&nbsp;&nbsp;&nbsp;+82</option><option value="+211" title="南苏丹">南苏丹&nbsp;&nbsp;&nbsp;&nbsp;+211</option><option value="+34" title="西班牙">西班牙&nbsp;&nbsp;&nbsp;&nbsp;+34</option><option value="+94" title="斯里兰卡">斯里兰卡&nbsp;&nbsp;&nbsp;&nbsp;+94</option><option value="+249" title="苏丹">苏丹　&nbsp;&nbsp;&nbsp;&nbsp;+249</option><option value="+597" title="苏里南河">苏里南河&nbsp;&nbsp;&nbsp;&nbsp;+597</option><option value="+268" title="史瓦济兰,安提瓜及巴布达">史瓦济兰..&nbsp;&nbsp;+268</option><option value="+46" title="瑞典">瑞典　&nbsp;&nbsp;&nbsp;&nbsp;+46</option><option value="+41" title="瑞士">瑞士　&nbsp;&nbsp;&nbsp;&nbsp;+41</option><option value="+963" title="叙利亚">叙利亚&nbsp;&nbsp;&nbsp;&nbsp;+963</option><option value="+992" title="塔吉克斯坦">塔吉克斯..&nbsp;&nbsp;+992</option><option value="+255" title="坦桑尼亚">坦桑尼亚&nbsp;&nbsp;&nbsp;&nbsp;+255</option><option value="+66" title="泰国">泰国　&nbsp;&nbsp;&nbsp;&nbsp;+66</option><option value="+228" title="多哥">多哥　&nbsp;&nbsp;&nbsp;&nbsp;+228</option><option value="+676" title="汤加群岛">汤加群岛&nbsp;&nbsp;&nbsp;&nbsp;+676</option><option value="+1868" title="特立尼达岛和多巴哥">特立尼达..&nbsp;&nbsp;+1868</option><option value="+216" title="突尼斯">突尼斯&nbsp;&nbsp;&nbsp;&nbsp;+216</option><option value="+90" title="土耳其">土耳其&nbsp;&nbsp;&nbsp;&nbsp;+90</option><option value="+993" title="土库曼">土库曼&nbsp;&nbsp;&nbsp;&nbsp;+993</option><option value="+1649" title="特克斯和凯科斯群岛">特克斯和..&nbsp;&nbsp;+1649</option><option value="+688" title="图瓦卢">图瓦卢&nbsp;&nbsp;&nbsp;&nbsp;+688</option><option value="+256" title="乌干达">乌干达&nbsp;&nbsp;&nbsp;&nbsp;+256</option><option value="+380" title="乌克兰">乌克兰&nbsp;&nbsp;&nbsp;&nbsp;+380</option><option value="+971" title="阿联酋">阿联酋&nbsp;&nbsp;&nbsp;&nbsp;+971</option><option value="+44" title="英国,格恩西岛,马恩岛,泽西岛">英国,格..&nbsp;&nbsp;+44</option><option value="+598" title="乌拉圭">乌拉圭&nbsp;&nbsp;&nbsp;&nbsp;+598</option><option value="+998" title="乌兹别克斯坦">乌兹别克..&nbsp;&nbsp;+998</option><option value="+678" title="瓦努阿图">瓦努阿图&nbsp;&nbsp;&nbsp;&nbsp;+678</option><option value="+58" title="委内瑞拉">委内瑞拉&nbsp;&nbsp;&nbsp;&nbsp;+58</option><option value="+84" title="越南">越南　&nbsp;&nbsp;&nbsp;&nbsp;+84</option><option value="+967" title="也门">也门　&nbsp;&nbsp;&nbsp;&nbsp;+967</option><option value="+260" title="赞比亚">赞比亚&nbsp;&nbsp;&nbsp;&nbsp;+260</option><option value="+263" title="津巴布韦">津巴布韦&nbsp;&nbsp;&nbsp;&nbsp;+263</option>            </select>
+            <input class="midInput w245" name="mobile" type="text" value="15179601349">
+            <cite data-node="ok" class="icon ok" style="display:none;"></cite>
+            <p data-node="error" class="error"></p>
+          </div>
+          <div class="saveBox">+8615179601349</div>
+        </li>
+        <li><em>电子邮箱</em>
+          <div class="modifyBox">
+            <input class="midInput" name="email" type="text" value="627656470@qq.com">
+            <cite data-node="ok" class="icon ok" style="display:none;"></cite>
+            <p data-node="error" class="error"></p>
+          </div>
+          <div class="saveBox">627656470@qq.com</div>
+        </li>
+        <li><em>QQ号</em>
+          <div class="modifyBox">
+             <input class="midInput" name="QQ" type="text" value="627656470">
+             <cite data-node="ok" class="icon ok" style="display:none;"></cite>
+            <p data-node="error" class="error"></p>
+          </div>
+          <div class="saveBox">627656470</div>
+        </li>
+        <li><em>所在地区</em>
+          <div class="modifyBox">
+	          <select id="provinceSelect" class="w120" name="province">
+
+		                <option value="北京市">北京市</option><option value="上海市">上海市</option><option value="天津市">天津市</option><option value="河北省">河北省</option><option value="山西省">山西省</option><option value="内蒙古自治区">内蒙古自治区</option><option value="辽宁省">辽宁省</option><option value="吉林省">吉林省</option><option value="黑龙江">黑龙江</option><option value="江苏省">江苏省</option><option value="浙江省">浙江省</option><option value="安徽省">安徽省</option><option value="福建省">福建省</option><option value="江西省">江西省</option><option value="山东省">山东省</option><option value="河南省">河南省</option><option value="湖北省">湖北省</option><option value="湖南省">湖南省</option><option value="广东省">广东省</option><option value="广西壮族自治区">广西壮族自治区</option><option value="海南省">海南省</option><option value="重庆市">重庆市</option><option value="四川省">四川省</option><option value="贵州省">贵州省</option><option value="云南省">云南省</option><option value="西藏自治区">西藏自治区</option><option value="陕西省">陕西省</option><option value="甘肃省">甘肃省</option><option value="青海省">青海省</option><option value="宁夏回族自治区">宁夏回族自治区</option><option value="新疆维吾尔自治区">新疆维吾尔自治区</option><option value="台湾省">台湾省</option><option value="香港">香港</option><option value="澳门">澳门</option><option value="海外">海外</option>		             </select>
+                                                                  <select id="citySelect" class="w120" name="city">
+                                <option value="上海市">上海市</option>		             </select>
+                                                        <select id="areaSelect" class="w120" name="area">
+                                <option value="黄浦区">黄浦区</option><option value="徐汇区">徐汇区</option><option value="长宁区">长宁区</option><option value="静安区">静安区</option><option value="普陀区">普陀区</option><option value="虹口区">虹口区</option><option value="杨浦区">杨浦区</option><option value="闵行区">闵行区</option><option value="宝山区">宝山区</option><option value="嘉定区">嘉定区</option><option value="浦东新区">浦东新区</option><option value="金山区">金山区</option><option value="松江区">松江区</option><option value="青浦区">青浦区</option><option value="奉贤区">奉贤区</option><option value="崇明区">崇明区</option>		             </select>
+          </div>
+          <div class="saveBox">上海市 上海市 嘉定区</div>
+        </li>
+        <li><em>详细地址</em>
+          <div class="modifyBox">
+             <input class="midInput" name="address" type="text" value="环东公寓703" data-default="请填写街道名称，门牌号码，楼层和房间号">
+             <cite data-node="ok" class="icon ok" style="display:none;"></cite>
+             <p data-node="error" class="error"></p>
+             <p><i class="f12 c999">地址必须在5-64个字之内</i></p>
+          </div>
+          <div class="saveBox">环东公寓703</div>
+        </li>
+      </ul>
+      <p class="infoBtn">
+        <a id="modifyBtn" class="button" href="javascript:">修改</a>
+        <a id="saveBtn" class="button" style="display:none;" href="javascript:">保存</a>
+      </p>
+    <input type="hidden" name="__hash__" value="1a230a40c982492102eb8b08c4ec2ecc_eaca8285c99134d1c7d7bc09021f5395"><input type="hidden" name="__hash__" value="1a230a40c982492102eb8b08c4ec2ecc_eaca8285c99134d1c7d7bc09021f5395"></form>
+</div>
+<input type="hidden" data-node="province-name" value="上海市">
+<input type="hidden" data-node="city-name" value="上海市">
+<input type="hidden" data-node="area-name" value="嘉定区">
+<!-- start 头像裁剪弹层 弹窗位置使用mask.js中的，把style属性去掉 -->
+<div class="popupWrap upload-avatar-popup hidden" style="position: fixed;left:50%;top:50%;margin:-240px 0 0 -320px">
+    <a class="icon closePopup" href="javascript:"></a>
+    <h3>选取头像</h3>
+    <div class="popupBody">
+        <div id="shearphoto_main" style="width: 258px; visibility: visible;">
+            <!--primary范围开始-->
+            <div class="primary" style="width: 258px;">
+                <!--main范围开始-->
+                <div id="main" style="width: 256px; height: 256px;">
+
+                    <!--选择加载图片方式开始-->
+                    <div id="SelectBox" style="width: 256px; height: 256px;">
+                        <form id="ShearPhotoForm" enctype="multipart/form-data" method="post" target="POSTiframe" action="/authors/shearphoto_commonphp/upload.php">
+                            <input name="shearphoto" type="hidden" value="我要传参数" autocomplete="off">
+                            <!--示例传参数到服务端，后端文件UPLOAD.php用$_POST['shearphoto']接收,注意：HTML5切图时，这个参数是不会传的-->
+                            <a href="javascript:" id="selectImage"><input type="file" name="UpFile" autocomplete="off"></a>
+                        <input type="hidden" name="__hash__" value="1a230a40c982492102eb8b08c4ec2ecc_eaca8285c99134d1c7d7bc09021f5395"><input type="hidden" name="__hash__" value="1a230a40c982492102eb8b08c4ec2ecc_eaca8285c99134d1c7d7bc09021f5395"></form>
+                    </div>
+                    <!--选择加载图片方式结束--->
+                    <div id="relat">
+                        <div id="black" style="width: 256px; height: 256px; background: rgb(255, 255, 255); opacity: 0.9;">
+                        </div>
+                        <div id="movebox">
+                            <div id="smallbox">
+                                <img src="shearphoto_common/images/default.gif" class="MoveImg"><!--截框上的小图-->
+                            </div>
+                            <!--动态边框开始-->
+                            <i id="borderTop">
+                            </i>
+                            <i id="borderLeft">
+                            </i>
+                            <i id="borderRight">
+                            </i>
+                            <i id="borderBottom">
+                            </i>
+                            <!--动态边框结束-->
+                            <i id="BottomRight">
+                            </i>
+                            <i id="TopRight">
+                            </i>
+                            <i id="Bottomleft">
+                            </i>
+                            <i id="Topleft">
+                            </i>
+                            <i id="Topmiddle">
+                            </i>
+                            <i id="leftmiddle">
+                            </i>
+                            <i id="Rightmiddle">
+                            </i>
+                            <i id="Bottommiddle">
+                            </i>
+                        </div>
+                        <img src="shearphoto_common/images/default.gif" class="BigImg"><!--MAIN上的大图-->
+                    </div>
+                </div>
+                <!--main范围结束-->
+                <!--工具条开始-->
+                <div id="Shearbar">
+                    <a id="LeftRotate" href="javascript:">
+                    </a>
+                    <em class="hint L">
+                    </em>
+                    <div class="ZoomDist" id="ZoomDist">
+                        <div id="Zoomcentre">
+                        </div>
+                        <div id="ZoomBar">
+                        </div>
+                        <span class="progress">
+                        </span>
+                    </div>
+                    <em class="hint R">
+                    </em>
+                    <a id="RightRotate" href="javascript:">
+                    </a>
+                </div>
+                <!--工具条结束-->
+            </div>
+            <!--primary范围结束-->
+        </div>
+
+        <div class="confirmBtn">
+            <a id="saveShear" class="button" href="javascript:">确认</a>
+            <a class="button white" href="javascript:">取消</a>
+        </div>
+    </div>
+</div>
+<!-- end 头像裁剪弹层 -->
+    	 </div>
+    </div>
+<img id="requestLoadingTip" class="loadImg" style="display:none;" src="https://img1.write.qq.com/writer/p1/contentv2/loading.gif"></div>
+
+
+    </div>
+    <div class="footer">
+	<div class="pageCenter">
+	<div id="contact-bubble" class="footer-bubble">
+		<em><i></i></em>
+		<ul>
+			<li><a target="_blank" href="http://kf.qidian.com/Default.aspx">联系起点客服</a></li>
+			<li><a target="_blank" href="http://kf.qq.com/product/chuangshi.html">联系创世客服</a></li>
+		</ul>
+    </div>
+            <a target="_blank" href="http://bbs.write.qq.com">作家论坛</a><span>|</span>
+		<a target="_blank" href="/about/help_center.html">帮助中心</a><span>|</span>
+		<a id="contact" href="javascript:;">联系客服</a><span>|</span><a target="_blank" href="http://join.book.qq.com/introduction.html">关于我们</a><span>|</span><a target="_blank" href="http://join.book.qq.com/social.html">诚聘英才</a><span>|</span><a target="_blank" href="/about/copyright.html">版权声明</a><span>|</span>Copyright
+		© 2018 All Rights Reserved 阅文集团 版权所有
+	</div>
+</div>
+</div>
+<script src="../../static/js/mycode.js"></script>
+</body>
+</html>

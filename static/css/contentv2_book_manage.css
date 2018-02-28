@@ -1,0 +1,666 @@
+@charset "utf-8";.datepicker{left:0;display:inline-block;border:1px
+solid #DFDFDF;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;width:203px;font:12px/1.5 "Microsoft YaHei";font-weight:300;-webkit-box-shadow: .5px .5px 3px #EEE;-moz-box-shadow: .5px .5px 3px #EEE;box-shadow: .5px .5px 0 #C8C8C8}.datepicker
+.datepicker_header{width:203px;height:34px;font:700 12px/34px "Microsoft YaHei";-webkit-user-select:none;-moz-user-select:none;user-select:none;text-align:center;color:#575757;background-color:#EEE}.setTimeBox i.dateBox .datepicker .datepicker_header
+a{margin:-2px 0 0;font-family:arial;font-size:14px;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;user-select:none;color:#575757;*margin:1px
+0 0}.datepicker .datepicker_header a:hover{color:#4EA8FF}.setTimeBox i.dateBox .datepicker .datepicker_header
+span{display:inline;margin-right:10px;margin-left:10px;-webkit-user-select:none;-moz-user-select:none;user-select:none;vertical-align:top}.setTimeBox i.dateBox .datepicker .datepicker_header a.icon-home{position:absolute;display:block;float:left;width:11pt;height:11pt;margin:3px
+0 0 8px;vertical-align:middle}.datepicker .datepicker_header .icon-home svg g
+path{fill:#4EA8FF}.datepicker
+.datepicker_inner_container{margin:-2px 0 -2px 0;background:#FFF}.datepicker .datepicker_inner_container:after{display:block;visibility:hidden;clear:both;height:0;content:"."}.datepicker .datepicker_inner_container
+.datepicker_calendar{float:left;border-top:none;border-right:1px solid #C8C8C8;-webkit-border-top-left-radius:3px;-moz-border-radius-topleft:3px;border-top-left-radius:3px;-webkit-border-bottom-left-radius:3px;-moz-border-radius-bottomleft:3px;border-bottom-left-radius:3px;padding:10px
+10px 10px 5px;background-color:#FFF;*padding:10px
+0}.datepicker .datepicker_inner_container .datepicker_calendar
+table{}.datepicker .datepicker_inner_container .datepicker_calendar .datepicker_table tbody tr
+th{width:18px;font-size:small;font-weight:normal;text-align:center;color:#646464}.datepicker .datepicker_inner_container .datepicker_calendar .datepicker_table tbody tr
+td{font-size:small;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;user-select:none;text-align:center;color:#333}.datepicker .datepicker_inner_container .datepicker_calendar .datepicker_table tbody tr
+td.today{border-bottom:#4EA8FF solid 1px}.datepicker .datepicker_inner_container .datepicker_calendar .datepicker_table tbody tr
+td.wday_sat{color:#04A}.datepicker .datepicker_inner_container .datepicker_calendar .datepicker_table tbody tr
+td.wday_sun{color:#E13B00}.datepicker .datepicker_inner_container .datepicker_calendar .datepicker_table tbody tr
+td.day_another_month{color:#CCC}.datepicker .datepicker_inner_container .datepicker_calendar .datepicker_table tbody tr
+td.day_in_past{cursor:default;color:#CCC}.datepicker .datepicker_inner_container .datepicker_calendar .datepicker_table tbody tr
+td.out_of_range{cursor:default;color:#CCC}.datepicker .datepicker_inner_container .datepicker_calendar .datepicker_table tbody tr
+td.active{color:#FFF;background-color:#4EA8FF}.datepicker .datepicker_inner_container .datepicker_calendar .datepicker_table tbody tr
+td.hover{color:#333;background-color:#E1F2FF}.datepicker .datepicker_inner_container
+.datepicker_timelist{position:absolute;top:33px;right:0;overflow:auto;overflow-x:hidden;-webkit-border-top-right-radius:3px;-moz-border-radius-topright:3px;border-top-right-radius:3px;-webkit-border-bottom-right-radius:3px;-moz-border-radius-bottomright:3px;border-bottom-right-radius:3px;width:62px;height:118px;padding:4px
+0 6px;padding:4px
+5px 6px 0\0;background-color:#FFF;*width:61px}.datepicker .datepicker_inner_container .datepicker_timelist::after{display:block;visibility:hidden;clear:both;height:0;content:"."}.datepicker .datepicker_inner_container .datepicker_timelist::-webkit-scrollbar{overflow:hidden;-webkit-border-top-right-radius:3px;-moz-border-radius-topright:3px;border-top-right-radius:3px;-webkit-border-bottom-right-radius:3px;-moz-border-radius-bottomright:3px;border-bottom-right-radius:3px;width:6px;background:#FAFAFA}.datepicker .datepicker_inner_container .datepicker_timelist::-webkit-scrollbar:horizontal{height:1px}.datepicker .datepicker_inner_container .datepicker_timelist::-webkit-scrollbar-button{display:none}.datepicker .datepicker_inner_container .datepicker_timelist::-webkit-scrollbar-piece{background:#EEE}.datepicker .datepicker_inner_container .datepicker_timelist::-webkit-scrollbar-piece:start{background:#EEE}.datepicker .datepicker_inner_container .datepicker_timelist::-webkit-scrollbar-thumb{-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;background:#CCC}.datepicker .datepicker_inner_container .datepicker_timelist::-webkit-scrollbar-corner{background:#333}.datepicker .datepicker_inner_container .datepicker_timelist
+div.timelist_item{margin-top:5px;margin-bottom:2px;padding-top:1px;padding-right:25px;padding-bottom:1px;padding-left:7px;font-size:small;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;user-select:none}.datepicker .datepicker_inner_container .datepicker_timelist
+div.timelist_item.time_in_past{cursor:default;color:#CCC}.datepicker .datepicker_inner_container .datepicker_timelist
+div.timelist_item.out_of_range{cursor:default;color:#CCC}.datepicker .datepicker_inner_container .datepicker_timelist
+div.timelist_item.active{color:#FFF;background-color:#808080}.datepicker .datepicker_inner_container .datepicker_timelist
+div.timelist_item.hover{color:#333;background-color:#E1F2FF}@charset "UTF-8";.null{width:380px;margin:140px
+auto;font-size:18px;text-align:center}.null
+img{margin-bottom:50px}.null
+.button{display:inline-block;width:178px;height:34px;font:14px/34px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif"}.msgBoxTitle
+.create.button{width:102px}.msgBoxTitle .zwhd
+.icon{width:14px;height:14px;margin:-3px 10px 0 0;background-position:-50px -340px}.create
+.icon{width:12px;height:12px;margin-right:10px;background-position:-21px 0}.worklist-table,.select-table{text-align:center}.worklist-table td, .select-table
+td{border-bottom:1px solid #E6E6E6;height:48px;padding:5px
+0;font:14px/1.5 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";color:#575757}.worklist-table td .zw-icon, .select-table td .zw-icon{width:15px;height:17px;background-position:-34px -340px}.worklist-table td .work-photo img, .select-table td .work-photo
+img{display:block;border:5px
+solid #FFF}.worklist-table td .work-name, .select-table td .work-name{display:table-cell;vertical-align:middle}.worklist-table td .work-name a, .select-table td .work-name
+a{display:block;margin-bottom:4px}.worklist-table td .work-name i, .select-table td .work-name
+i{display:inline-block;padding:1px
+4px;border:1px
+solid #5295B5;border-radius:3px;color:#5295B5;font-size:12px}.worklist-table td.tl p, .select-table td.tl
+p{padding-right:20px}.worklist-table td a, .select-table td
+a{word-break:break-all;color:#575757}.worklist-table td a.blue, .select-table td
+a.blue{color:#419AD9}.worklist-table td a:hover, .select-table td a:hover{color:#4EA8FF}.worklist-table td .qq-group, .select-table td .qq-group{display:none;color:#999}.worklist-table td .time, .select-table td
+.time{display:none;color:#999}.worklist-table td .work-photo, .select-table td .work-photo{display:none;float:left;margin-right:10px;padding:4px
+0}.worklist-table th, .select-table
+th{border-bottom:1px solid #E6E6E6;height:44px;font:14px/44px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";background:#F9F9F9}.worklist-table tr.active, .select-table
+tr.active{background:#F6FBFF}.worklist-table tr.active td, .select-table tr.active
+td{height:auto;padding:10px
+0 5px}.worklist-table tr.active .work-photo, .worklist-table tr.active .time, .worklist-table tr.active .qq-group, .select-table tr.active .work-photo, .select-table tr.active .time, .select-table tr.active .qq-group{display:block}.worklist-table tr.active .work-name, .select-table tr.active .work-name{width:130px;height:118px}.worklist-table tr.active .dib-wrap i, .select-table tr.active .dib-wrap
+i{display:block}.worklist-table tr.active .dib-wrap .button, .select-table tr.active .dib-wrap
+.button{width:66px;height:66px;text-indent:0}.worklist-table tr.active .dib-wrap .button.zw-btn, .select-table tr.active .dib-wrap .button.zw-btn{display:inline-block;width:88px;height:30px}.worklist-table tr.active .dib-wrap .button span, .select-table tr.active .dib-wrap .button
+span{margin:10px
+auto}.worklist-table tr.active .dib-wrap .white span, .select-table tr.active .dib-wrap .white
+span{margin:12px
+auto}.worklist-table .dib-wrap i, .select-table .dib-wrap
+i{display:none}.worklist-table .dib-wrap .button, .select-table .dib-wrap
+.button{border:1px
+solid #50A8FF;border-radius:3px;width:28px;height:28px;font:12px/1 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";transition:none;text-decoration:none;color:#AAA}.worklist-table .dib-wrap .button.blue, .select-table .dib-wrap
+.button.blue{margin-right:10px;color:#FFF}.worklist-table .dib-wrap .button.zw-btn, .select-table .dib-wrap .button.zw-btn{display:none;width:88px;height:30px;font:14px/30px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";color:#FFF}.worklist-table .dib-wrap a span, .select-table .dib-wrap a
+span{display:block}.worklist-table .dib-wrap .blue span, .select-table .dib-wrap .blue
+span{width:20px;height:24px;margin:3px
+auto;background-position:-195px -146px}.worklist-table .dib-wrap .white, .select-table .dib-wrap
+.white{border:1px
+solid #DDD}.worklist-table .dib-wrap .white span, .select-table .dib-wrap .white
+span{width:18px;height:21px;margin:4px
+auto;background-position:-195px -171px}.workStepList{width:500px;margin:80px
+auto 0;font:14px/1.8 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei","sans-serif"}.workStepList.step3{width:auto;margin:80px
+auto 0 80px}.workStepList
+li{position:relative;padding-left:78px;line-height:32px;*zoom:1}.workStepList.zw-area
+li{padding-left:150px !important}.workStepList li
+span.radio{margin-top:11px}.workStepList li
+select{visibility:visible;margin-right:10px;vertical-align:middle;filter:alpha(opacity=100)}.workStepList li.upload-img{margin-top:20px}.workStepList li.upload-img .chapter-upload-wrap{width:298px;height:398px;margin-bottom:10px;border:1px
+solid #C4C4C4}.workStepList li.upload-img .chapter-upload-wrap
+img{display:block}.workStepList li.upload-img
+p{position:relative;height:36px;margin-bottom:20px}.workStepList li.upload-img .upload-btn{position:absolute;z-index:1;left:0;top:0;width:118px;height:34px;border:1px
+solid #C4C4C4;border-radius:3px;text-align:center;color:#666;font:14px/34px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";background:#FFF}.workStepList li.upload-img
+input{position:absolute;z-index:2;top:0;left:0;width:120px;font-size:26px;opacity:0;filter:alpha(opacity=0)}.workStepList li.upload-img
+i{position:absolute;left:130px;font:12px/34px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";color:#999}.workStepList li.chapter-text{margin-top:20px}.workStepList li.chapter-text
+textarea{display:block;width:747px;height:434px;padding:0
+0 0 5px;margin-bottom:5px;border:1px
+solid #DDD}select.bigClass{width:100px}select.subClass{width:266px}.step1
+li{margin-bottom:20px}.step2
+ul{width:780px}.step2
+li{margin-bottom:15px}.step2 li
+label{float:left;line-height:32px}.step2 li
+label.mr20{margin-right:20px}.step2 li
+.readme{font-size:12px;line-height:32px}.step2 li
+.accredit{margin-left:10px;font-size:12px;line-height:34px}.step2 li
+.filterTagBox{width:378px}.step2 li p.tag-intro{width:384px;margin-top:-5px;font:12px/2 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";color:#999}.step2 li.show-match-popup .btn-box{padding-top:5px}.step2 li.show-match-popup .btn-box a, .step2 li.show-match-popup .btn-box
+span{display:inline-block;vertical-align:middle}.step2 li.show-match-popup .btn-box
+a{width:126px;height:32px;margin-right:20px;text-align:center;border:1px
+solid #DDD;color:#999}.step2 li.show-match-popup .btn-box a:hover{color:#419AD9}.workStepList li
+em{position:absolute;top:0;left:0;line-height:32px}.workStepList li
+.tip{clear:both;width:350px;margin-top:4px;margin-bottom:0;margin-left:5px;font-size:12px;line-height:1.8;color:#999}.step1
+.tip{padding-bottom:10px;padding-left:12px}.selectBox{margin-bottom:10px}.workStepList .selectBox
+select{border:1px
+solid #DDD;height:30px}.workStepList li
+.error{font-size:12px;line-height:1.5;color:#E55555}.workStepList li input[type='text'].long{border:1px
+solid #DDD;width:378px;height:28px;margin-bottom:5px;line-height:28px;text-indent:5px}.workStepList li.flyleaf .flyleaf-tip{position:absolute;z-index:1;top:108px;right:325px}.workStepList li.flyleaf .flyleaf-tip .q-icon{width:16px;height:16px;background-position:-202px -317px}.workStepList li.flyleaf .flyleaf-tip
+.accreditTip{width:200px;top:28px;left:-96px;line-height:2.5}.filterTagBox{border:1px
+solid #DDD;width:348px;height:28px;line-height:1;cursor:pointer}.filterTagBox.disabled{background:#E3E3E3;color:#CCC;cursor:no-drop}.filterTagBox.disabled
+a{background:#CCC}.filterTagBox
+a{position:relative;z-index:2;display:inline-block;height:22px;margin:3px
+0 0 5px;padding:0
+24px 0 7px;font:12px/22px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";vertical-align:middle;color:#FFF;background:#50A8FF}.filterTagBox a
+i{position:absolute;top:7px;right:5px;width:7px;height:7px;background:url(https://img1.write.qq.com/writer/p1/contentv2/sprite.png) no-repeat -21px -13px}.filterTagBox a:hover{color:#FFF}.stepBtn{padding:30px
+0 20px 78px}.stepBtn
+.button{display:inline-block;width:180px;height:35px;font:14px/35px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif"}.stepBtn
+.c999{margin-left:20px}.step2
+textarea{overflow-y:hidden;border:1px
+solid #DDD;width:373px;height:94px;margin:5px
+0 0;padding-left:5px}.step2 .stepBtn
+.button{margin-right:20px}.accreditTip{position:absolute;top:40px;left:151px;border:1px
+solid #DDD;width:268px;padding:4px
+0;font:12px/1.8 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";background:#FAFAFA}.workStepList li.z1
+.accreditTip{left:106px}.accreditTip
+p{padding:0
+10px;margin:0
+auto}.accreditTip
+cite{position:absolute;top:-8px;left:50%;width:15px;height:8px;margin-left:-5px;background-position:-80px -20px}.step4{width:450px;margin:100px
+auto 0;padding-left:0}.step4
+h3{margin-bottom:50px;font:24px/1 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";text-align:center;color:#4BC46D}.step4
+.ok{display:inline-block;width:28px;height:24px;margin:-3px 10px 0 0;background-position:-80px -147px}.step4
+.info{width:394px;margin:0
+auto;text-align:center}.step4
+.button.white{color:#999;border:1px
+solid #979797}.step4Btn
+a{display:inline-block;width:180px;height:36px;margin:0
+10px;font:14px/36px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif"}.step4
+.qrZone{margin:80px
+0;padding-top:12px}.step4 .qrZone
+h4{margin-top:24px;padding-top:15px;font-weight:400;color:#575757;border-top:1px solid #E6E6E6}.step4 .qrZone
+h5{font-weight:400;color:#575757}.step4 .qrZone
+dd{overflow:hidden;padding:19px
+0 0;*zoom:1}.step4 .qrZone dl
+img{float:left;margin-right:18px}.step4 .qrZone dl
+.qrZoneInfo{float:left;width:360px}.step4 .qrZone dl .qrZoneInfo
+h5{margin-bottom:10px;font:16px/1 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif"}.step4 .qrZone dl .qrZoneInfo
+p{font-size:12px;color:#999}.worksInfoWrap{position:relative;border-bottom:1px solid #E6E6E6;height:96px;padding-bottom:150px;background:url(https://img1.write.qq.com/writer/p1/contentv2/works_bg.png) no-repeat}.worksImgBox{position:absolute;top:25px;left:34px;border:1px
+solid #E0E0E0;background:#FFF;box-shadow:0 0 1px #CCC}.worksImgBox
+span{position:absolute;bottom:4px;left:4px;width:134px;height:32px;font:14px/30px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";text-align:center;color:#FFF;background:#444;background:rgba(0, 0, 0, 0.6)}.worksImgBox
+img{padding:4px}.worksInfoText{position:absolute;top:55px;left:198px}.worksInfoText
+h3{width:740px;margin-bottom:40px;font:24px/1 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";color:#376590}.worksInfoText h3
+.vip{display:inline-block;border:1px
+solid #FFB250;height:16px;margin-left:10px;padding:0
+5px;font:12px/16px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";vertical-align:middle;color:#FFB24E;background:#FBECD8}.worksInfoText h3
+.number{float:right;font:12px/30px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";color:#8BAECE}.worksInfoText
+p{font:14px/1.8 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";color:#858585}.worksInfoText p .Num, .worksInfoText p
+i{margin:0;color:#333}.worksInfoText p
+span{margin-right:28px}.worksInfoText p
+cite{margin-left:20px;font:12px/1.8 Arial;color:#999}.worksFunction{padding:30px
+0 0 35px}.worksFunction
+li{float:left;margin-right:20px;padding-bottom:26px}.worksFunction li
+a{display:block;border:1px
+solid #E6E6E6;width:188px;height:62px;padding-left:20px;font:16px/62px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";background:#F9F9F9}.worksFunction li a:hover{border:1px
+solid #50A8FF;color:#FFF;background:#50A8FF}.worksFunction li a
+span{display:inline-block;width:28px;height:28px;margin:-2px 10px 0 0;vertical-align:middle;background-image:url(https://img1.write.qq.com/writer/p1/contentv2/detailicon.png)}.worksFunction li a
+span.setup{background-position:0 0}.worksFunction li a:hover
+span{background-position:-28px 0}.worksFunction li a
+span.manager{background-position:0 -28px}.worksFunction li a:hover
+span.manager{background-position:-28px -28px}.worksFunction li a
+span.VIP{height:26px;background-position:0 -57px}.worksFunction li a:hover
+span.VIP{background-position:-28px -57px}.worksFunction li a
+span.dy_refer{background-position:0 -84px}.worksFunction li a:hover
+span.dy_refer{background-position:28px -84px}.worksFunction li a
+span.apply_sign{height:26px;background-position:0 -114px}.worksFunction li a:hover
+span.apply_sign{background-position:-28px -114px}.worksFunction li a
+span.apply_whb{background-position:0 -140px}.worksFunction li a:hover
+span.apply_whb{background-position:-28px -140px}.worksFunction li a
+span.apply_wyzd{height:26px;background-position:0 -170px}.worksFunction li a:hover
+span.apply_wyzd{background-position:-28px -170px}.worksFunction li a
+span.apply_rec{background-position:0 -197px}.worksFunction li a:hover
+span.apply_rec{background-position:-28px -197px}.worksFunction li a
+span.security{background-position:0 -224px}.worksFunction li a:hover
+span.security{background-position:-28px -224px}.managerWrap{overflow:hidden}.mLeftList{border-right:1px solid #E6E6E6;width:230px;margin-bottom:-5000px;padding-bottom:5000px}.mLeftList
+.titleBox{height:47px;background:#F6F6F6}.mLeftList .titleBox
+p{padding-left:9px;font:12px/56px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei","sans-serif";color:#999}.minTipBox{position:absolute;z-index:100;top:30px;left:101px;width:167px;height:31px;font:12px/31px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";text-indent:15px;color:#FFF;background:#50A8FF}.minTipBox
+.close{position:absolute;top:10px;right:10px;width:11px;height:11px;cursor:pointer;background-position:-194px -96px}.slimScrollDiv{z-index:1}.slimScrollRail{border-right:1px solid #E6E6E6;border-left:1px solid #E6E6E6}.slimScrollBar{border-right:1px solid #D9D9D9;border-left:1px solid #D9D9D9;cursor:move}.minTipBox
+b{position:absolute;top:-7px;left:50%;width:13px;height:7px;margin-left:-5px;background-position:-65px -113px}.sectionManage{position:relative;border-top:1px solid #E6E6E6;height:740px;background:#FFF}.sectionList
+li{position:relative;z-index:1;overflow:hidden;cursor:pointer;*zoom:1}.sectionList
+li.ban{background:#FFF7F7}.sectionList li.ban .ban-tag{position:absolute;right:10px;top:14px;color:#FF7F86;font-size:12px}.sectionList
+li.act{border-bottom:1px solid #D0E9FF;background:#E1F2FF}.sectionList li.act .sectionBox
+p{color:#376590}.sectionList li.act .sectionBox
+p.f12{color:#8BAECE}.sectionBox{border-bottom:1px solid #E6E6E6;padding:8px
+20px 6px 9px}.sectionList li:last-of-type
+.sectionBox{border-bottom:none}.volumeList li:last-of-type
+.sectionBox{border-bottom:1px solid #E6E6E6}.sectionList li.act
+.sectionBox{border-bottom:none}.volumeBox{border-bottom:1px solid #E6E6E6;padding:10px
+9px 8px;cursor:pointer}.volumeBox
+p{position:relative;min-height:25px;font:14px/1.8 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";color:#333}.volumeBox p.sub-volume{overflow:hidden;width:180px;white-space:nowrap;text-overflow:ellipsis;color:#333}.volumeBox p
+span{margin-left:5px;font:12px/1 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";color:#999}.volumeBox p
+cite{position:absolute;top:11px;right:10px;border:6px
+solid;border-color:#999 transparent transparent transparent;width:0;height:0;_overflow:hidden}.volumeBox p
+.flag{display:inline-block;vertical-align:middle;width:9px;height:11px;margin:-1px 0 0 5px;background-position:-14px -400px}.volume.act .volumeBox p
+cite{top:3px;border-style:dashed dashed solid dashed;border-color:transparent transparent #999 transparent}.sectionList
+.sectionBox{padding:10px
+20px 3px 9px}.sectionWrap{display:none}.sectionBox
+p{overflow:hidden;font:14px/1.8 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";color:#333;*zoom:1}.sectionWrap
+li{background:#FAFAFA}.sectionBox
+p.f12{font-size:12px;color:#999}.sectionBox p.f12
+i{float:right}.sectionBox p
+em{display:inline-block;overflow:hidden;width:180px;min-height:25px;white-space:nowrap;text-overflow:ellipsis}.sectionBox p
+.time{display:inline-block;vertical-align:middle;width:17px;height:18px;margin-right:7px;background-position:-46px -204px}.mRightContent{width:809px;padding-bottom:5000px;margin-bottom:-5000px}.mRightContent .midWrap
+.titleHead{margin-top:24px}.mRightContent .midWrap .titleHead
+h3{border-bottom:1px solid #E6E6E6;padding-bottom:16px;font:18px/35px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif"}.mRightContent .midWrap .titleHead h3
+input{width:400px;padding:8px
+0;font-family:"PingFangSC-Regular","HelveticaNeue-Light","Helvetica Neue Light","Microsoft YaHei","sans-serif";color:#BBB}.mRightContent .midWrap.editWrap .titleHead
+h3{border-bottom:none;margin-top:-10px}.titleBtn{padding:8px
+0 0}.titleBtn
+a{float:left;margin-right:10px;font:14px/28px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif"}.titleBtn
+.button{height:28px;padding:0
+13px}.titleBtn
+.button.white{color:#999}.titleBtn
+.button.font{padding:0
+6px}.titleBtn
+.button.green{width:78px;padding:0;text-decoration:none}.titleBtn .button.green
+.icon{width:17px;height:16px;margin:-3px 6px 0 0;background-position:-195px -193px}.titleBtn .button.save
+.icon{width:16px;height:16px;margin:-3px 8px 0 0;background-position:-18px -23px}.titleBtn .button.modify
+.icon{width:16px;height:16px;margin:-3px 8px 0 0;background-position:-171px -39px}.titleBtn .button-font{padding:0
+3px;line-height:30px;color:#666}.titleBtn .button-font:hover{color:#4EA8FF}.apply-intro{border:1px
+solid #DDD;width:640px;height:28px;margin-top:8px;padding:0
+10px;font:14px/28px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei","sans-serif";color:#BBB}.sectionViewWrap{position:relative}.sectionViewWrap
+h4{overflow:hidden;margin-top:9px;margin-bottom:10px;font-size:12px;*zoom:1}.sectionBtnBox{border-bottom:1px solid #E6E6E6;width:761px;height:46px;padding:1px
+24px 0 24px;font-size:12px;background:#FAFAFA}.sectionBtnBox
+b{float:left;font-weight:400;line-height:46px;margin-right:40px;margin-left:10px}.sectionBtnBox.fixed{z-index:10;top:0}.sectionBtnBox .combo-select{z-index:5;float:left;width:132px;height:28px;margin:8px
+10px 0 0}.sectionBtnBox .combo-select:last-of-type{width:102px}* + html .sectionBtnBox .combo-select .combo-input{width:90%;height:27px;padding-left:10px;text-indent:0}.sectionBtnBox .combo-select
+input{font-size:12px}.sectionBtnBox
+em{float:left;margin-right:10px;line-height:46px}.sectionBtnBox .chapter-state{float:left;padding-left:36px}.sectionBtnBox .chapter-state
+.question{width:14px;height:14px;margin:-3px 0 0 3px;background-position:0 -398px}.sectionBtnBox
+i{float:left;padding-left:20px}.sectionBtnBox
+.radio{margin:14px
+5px 0 0}.sectionBtnBox
+label{float:left;margin-right:15px;color:#858585}.sectionViewWrap
+.zwText{padding:10px
+20px 0;font:16px/1.8 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";word-break:break-all;color:#575757}.sectionViewWrap .zwText
+p{margin: .8em 0}.sectionViewWrap .zwText>h3{border-bottom:1px solid #E6E6E6;margin:16px
+0 10px;padding:0
+4px 6px;font:18px/40px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif"}.sectionViewWrap .zwText
+h3{font-size:20px;margin: .5em 0}.sectionViewWrap .zwText img, .sectionViewWrap .zwText embed, .sectionViewWrap .zwText object, .sectionViewWrap .zwText video, .sectionViewWrap .zwText
+iframe{display:inline-block;max-width:100%}.sectionViewWrap .zwText
+table{border-collapse:collapse;table-layout:fixed}.sectionViewWrap .zwText td, .sectionViewWrap .zwText
+th{padding:5px
+0;border:1px
+solid #CCC}.sectionViewWrap .zwText tr:nth-child(2n){background-color:#F8F8F8}.sectionViewWrap .zwText pre, .sectionViewWrap .zwText
+code{font-family:Consolas,Monaco,monospace;background-color:#F7F7F7}.sectionViewWrap .zwText
+pre{white-space:pre-wrap;word-wrap:break-word;font-size:85%}.sectionViewWrap .zwText ol, .sectionViewWrap .zwText
+ul{padding-left:1em;margin:0;margin-bottom:1em}.sectionViewWrap .zwText ul
+li{list-style:disc}.sectionViewWrap .zwText ol
+li{list-style:decimal}.sectionViewWrap .zwText
+li{margin: .5em 0}.sectionViewWrap .zwText
+blockquote{margin:0;padding:0
+1em;color:#777;border-left:0.25em solid #DDD}.sectionViewWrap .zwText
+a{color:#575757;text-decoration:none;cursor:default}.sectionViewWrap .zwText em, .sectionViewWrap .zwText i, .sectionViewWrap .zwText
+cite{font-style:normal}.sectionViewWrap .zwText p.tinymce-insert-wrap{margin-bottom:0.8rem}.sectionViewWrap .zwText .tinymce-insert-wrap
+img{display:block;text-align:center;margin:0
+auto;width:640px}.sectionViewWrap .zwText .insert-title{display:block;text-align:center;color:#A0A0A0;margin:0;font-weight:400;font-size:14px}.sectionViewWrap .zwText
+.br{margin-bottom: .8em}.sectionViewWrap
+.authorSay{position:absolute;z-index:5;bottom:0;left:0;border-top:1px solid #E6E6E6;width:100%;height:81px;padding:10px
+0 10px 20px;font:14px/1.8 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";background:#FFF}.sectionViewWrap .authorSay
+p{padding-right:20px}.zwText
+input{display:block;border-bottom:1px solid #E6E6E6;width:769px;margin:16px
+0 10px;padding:0
+0 6px 0;height:40px;font:18px/40px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";text-indent:4px}.zwText
+textarea{overflow:hidden;overflow-y:auto;border:none;width:769px;height:540px;padding:0
+4px;word-break:break-all;color:#575757}.say-area{border-top:1px solid #E6E6E6;margin-top:16px;font:14px/1.8 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif"}.say-area
+p{padding:0
+10px 0 24px}.say-area
+.say{overflow-y:auto;word-break:break-all}.say-area
+textarea{overflow-y:auto;border:none;width:763px;height:80px;margin-top:10px;padding-right:10px;font:14px/1.8 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei","sans-serif";color:#575757}.cartoon-cover{padding:10px
+0 98px 20px}.cartoon-cover
+.cover{border:1px
+solid #DEDEDE;width:298px;height:448px;margin-right:20px}.cartoon-cover
+img{display:block;width:298px;height:448px}.upload-box{position:relative;width:360px}.upload-box
+.button.white{display:block;width:98px;height:28px;margin-bottom:16px;font:14px/28px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";color:#999}.upload-box
+input{position:absolute;top:0;left:0;width:100px;height:30px;font-size:22px;opacity:0;filter:alpha(opacity=0)}.upload-box
+p{font:14px/1.8 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei","sans-serif";color:#999}.cartoon-content{border-top:1px solid #E6E6E6;margin:0
+20px}.cartoon-content
+textarea{overflow:hidden;border:none;width:690px;height:80px;margin:5px
+4px 0;padding:0
+0 0 5px;color:#575757;background:none}.newVolume{width:750px;margin:0
+auto;padding:24px
+0 0}.newVolume
+h3{border-bottom:1px solid #E6E6E6;padding-bottom:20px;font:16px/1 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif"}.newVolume h3
+span{margin-left:10px;font-size:12px;color:#999}.volumeForm{width:576px;padding:30px
+0 0 5px}.volumeForm
+li{position:relative;margin-bottom:20px;padding-left:100px;line-height:30px}.volumeForm li
+em{position:absolute;left:0;width:80px;font:14px/30px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";text-align:right;color:#858585}.volumeForm li
+input.midInput{border:1px
+solid #DDD;width:373px;height:28px;padding-left:5px;font:14px/28px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif"}.volumeForm li
+textarea{border:1px
+solid #DDD;width:373px;height:88px;padding-left:5px}.volumeForm li
+p{height:30px;font:14px/30px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei","sans-serif"}.apply-wrap-content{padding:30px
+20px 0}.apply-wrap-content
+h3{margin-bottom:20px;font:700 18px/1.8 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";text-align:center}.apply-wrap-content
+h4{font:700 14px/1.8 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif"}.apply-wrap-content
+p{font:14px/1.8 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";text-align:justify}.apply-List
+li{border-bottom:1px solid #E6E6E6;height:69px;*vertical-align:bottom}.apply-List li
+a{display:block;padding-left:20px;font:14px/70px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif"}.apply-List li a
+span{width:27px;margin:-3px 10px 0 0}.apply-List li a
+.sign{height:25px;background-position:-113px -114px}.apply-List li a
+.margin{height:28px;background-position:-112px -224px}.apply-List li a
+.wenxiu{width:28px;height:28px;background-position:-112px -140px}.apply-List li a
+.wyzd{width:28px;height:26px;background-position:-112px -169px}.apply-List li a
+.rec{width:28px;height:28px;background-position:-112px -197px}.apply-List
+li.act{border-bottom:1px solid #D0E9FF;background:#E1F2FF}.apply-List li.act
+a{color:#376590}.condition{margin-bottom:20px}.condition
+li{float:left;border:1px
+solid #E9E9E9;border-radius:20px;height:28px;padding:0
+16px;margin:10px
+10px 10px 0;font:14px/28px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";color:#999;background:#F6F6F6}.condition li
+span.icon{display:inline-block;vertical-align:middle;margin:-2px 5px 0 0}.workStateWrap{padding:40px
+0 0 40px}.workStateWrap .bookState
+em{display:inline-block;width:56px;margin-right:20px;font:14px/35px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";text-align:right;vertical-align:top;letter-spacing:normal;word-spacing:normal;color:#858585}.workStateWrap .bookState
+i{display:inline-block;min-width:100px;margin-right:25px;font:14px/35px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei","sans-serif";vertical-align:top;letter-spacing:normal;word-spacing:normal;_width:128px}.workSetList{width:640px}.workSetList
+li{position:relative;margin-bottom:10px;padding-left:90px;vertical-align:bottom}.workSetList
+li.mb50{margin-bottom:50px}.workSetList li.flyleaf .flyleaf-tip{position:absolute;z-index:1;bottom:7px;right:200px !important}.workSetList li.flyleaf .flyleaf-tip .q-icon{width:16px;height:16px;background-position:-202px -317px}.workSetList li.flyleaf .flyleaf-tip
+.accreditTip{width:230px;top:28px;left:-111px;line-height:2.5}.workSetList li
+b{display:inline-block;width:140px;margin-right:100px;font:14px/30px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif"}.workSetList li
+cite{font:14px/30px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";color:#858585}.workSetList li
+em{position:absolute;left:0;width:75px;font:14px/30px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";text-align:right;color:#858585}.workSetList li
+span.radio{margin:10px
+5px 0 0}.workSetList li p.saved, .workSetList li
+p.modify{float:left;font:14px/30px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif"}.workSetList li p.modify
+label{margin-right:20px}.workSetList li
+p.f12{margin-top:5px;font-size:12px}.workSetList li
+p.error{line-height:30px}.workSetList li
+p.intro{float:none;width:420px}.workSetList li p
+.qqgroup{color:#B3B3B3;padding-left:10px}.workStateWrap
+.fmBox{border:1px
+solid #E6E6E6;width:120px;height:158px;margin:8px
+40px 0 0}.fmBox
+.fm{position:relative;text-align:center}.fmBox .fm
+a.blue{display:block;margin-top:10px;font:12px/18px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif"}.fmBox .fm .upload-btn{position:absolute;left:0;width:120px;height:33px;font-size:23px;opacity:0;filter:alpha(opacity=0)}.workStateWrap .fmBox .fm
+span{position:absolute;bottom:-50px;left:0;width:120px;height:33px;font:14px/33px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";text-align:center;color:#999;border:1px
+solid #DDD;-webkit-border-radius:2px;-moz-border-radius:2px;-o-border-radius:2px;border-radius:2px;background:#FFF;filter:alpha(opacity=90);cursor:pointer}.workStateWrap .fmBox
+img{display:block;width:114px;height:152px;margin:3px
+0 0 3px}.fm-tipbox{padding:7px
+0}.fm-tipbox
+p{font:12px/1.8 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";color:#999}.workSetList
+li{min-height:30px}.workSetList li
+p{font:14px/30px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif"}.workSetList li
+p.tip{color:#999;font-size:12px}.workSetList li
+p.tip.modify{float:none}.workSetList li
+i.tag{border:1px
+solid #FFB250;height:16px;margin-left:10px;padding:0
+3px;font:12px/18px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";color:#FFB250;background:#FBECD8}.workSetList li
+.midInput{border:1px
+solid #DDD;width:345px;height:28px;padding-left:5px;line-height:28px}.workSetList li
+span.radio{margin:10px
+5px 0 0}.workSetList li
+textarea{overflow-y:auto;border:1px
+solid #DDD;width:343px;height:88px;padding-left:5px}.workSetList li
+.button.green{position:absolute;top:0;left:451px;width:58px;height:28px;font:14px/28px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";text-decoration:none}.workSetList .confirm, .workSetList .modify-btn{padding:10px
+0 0 90px}.workSetList .dib-wrap
+.button{width:178px;height:34px;font:14px/34px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";vertical-align:middle}.workSetList .confirm
+.button{width:78px;height:28px;margin-right:10px;line-height:28px}.recTagBox
+a{position:relative;display:inline-block;border:1px
+solid #DDD;margin:0
+5px 8px 0;padding:0
+20px 0 5px;font:12px/20px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";text-align:left;color:#575757;background:#F9F9F9}.recTagBox a
+cite{position:absolute;top:6px;right:5px;width:7px;height:7px;background-position:-29px -13px}.lenovoBox{position:absolute;z-index:1;top:29px;display:none;overflow-y:auto;border:1px
+solid #DDD;width:350px;height:200px;font:14px/1.8 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";background:#FFF}.lenovoBox dd
+a{display:block;padding-left:5px}.lenovoBox dd a:hover{color:#376590;background:#E1F1FE}.applyTextWrap{padding:40px
+80px 0}.applyTextWrap
+h3{margin-top:20px;margin-bottom:5px;color:#575757}.applyTextWrap
+p{font:14px/2 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif"}.applyTextWrap
+input.message{display:block;border:1px
+solid #DDD;width:800px;height:28px;margin-top:20px;margin-bottom:10px;padding-left:10px;font:14px/30px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";color:#999}.applyTextWrap
+.applyBtn{display:block;width:180px;height:36px;font:14px/36px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei","sans-serif"}.applyTemplate{padding:20px
+139px 50px}.applyTemplate
+h3{margin-bottom:8px;font:18px/2 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei","sans-serif";text-align:center}.applyTable{border-top:1px solid #E6E6E6;border-left:1px solid #E6E6E6}.applyTable
+td{border-right:1px solid #E6E6E6;border-bottom:1px solid #E6E6E6;height:31px;padding:4px
+0;font:14px/1.8 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";text-align:center}.applyTable
+.fa{background:#FAFAFA}.applyTable
+.top{padding:30px
+0;vertical-align:top}.applyTable td
+p{padding:0
+10px;text-align:justify;color:#333}.applyTable td
+em.Num{display:inline-block;border-bottom:1px solid #575757;width:50px;line-height:1;text-align:center}.myRecWrap{padding:20px
+30px 0}.myRecWrap
+h3{margin:10px
+0}.myRecWrap
+p{font:14px/2 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei","sans-serif"}.recFormWrap{padding:20px
+0 40px}.goTemplate{border-top:1px solid #E6E6E6;text-align:right}.goTemplate
+a{font:12px/30px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";text-decoration:none}.recFormList
+em{color:#858585}.recFormList
+p{margin-bottom:20px}.recFormList p
+label{margin-right:20px;line-height:30px}.recFormList p
+em{margin-right:20px}.recFormList p
+i{margin-right:40px;color:#333}.recFormList p
+input.words{border:1px
+solid #DDD;width:78px;height:28px;margin:0
+10px;line-height:28px;text-align:center;vertical-align:middle}.recFormList
+li{position:relative;overflow:hidden;padding-left:78px;vertical-align:bottom;*zoom:1}.recFormList li
+em{position:absolute;top:0;left:0;font:14px/30px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif"}.recFormList li
+textarea{overflow-y:hidden;border:1px
+solid #DDD;width:664px;height:214px;padding-left:5px}.recFormList li
+.tip{margin:5px
+0 15px;font:12px/20px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";color:#999}.recFormList li
+input.midInput{border:1px
+solid #DDD;width:373px;height:30px;padding-left:5px;line-height:28px;vertical-align:middle}.recFormList
+.confirm{padding:10px
+0 0 80px}.recFormList .confirm
+.button{display:inline-block;width:180px;height:36px;font:14px/34px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif"}.recFormList
+li.line{border-bottom:1px solid #E6E6E6;margin:20px
+0}.recFormList .grade
+li{margin-bottom:15px;font-size:0;*word-spacing:-1px}.recFormList
+li.gradeTit{padding:10px
+0}.gradeTit
+a{font-size:12px;text-decoration:none}.recForm.grade
+textarea{width:585px;height:138px;color:#BBB}.recForm.grade
+.checkBox{margin-top:9px}.recForm.grade
+.scoreInput{border:1px
+solid #DDD;border-left:none;width:78px;height:20px;padding:59px
+0;font:24px/20px Arial;text-align:center;vertical-align:top;color:#FFBE4E}.recForm.grade
+.tip{margin-bottom:0}.recForm.grade
+.scoreInput.on{background:url(https://img1.write.qq.com/writer/p1/contentv2/score_bg.png) no-repeat center}.recForm.grade
+.scoreInput.off{background:none}.recForm.grade
+.filterTagBox{height:auto;min-height:28px}.recForm.grade .filterTagBox
+a{margin-bottom:3px}.section-bubble{position:absolute;z-index:20;display:none;border:1px
+solid #F5E3C6;background:#FFF7EA}.section-bubble
+p{padding:7px
+10px;font:14px/1 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";color:#F39800}.section-bubble
+.icon{position:absolute;top:100%;left:50%;margin-left:-10px;width:14px;height:7px;background-position:-69px -173px}.update-pic-dialog{width:460px;height:330px;background:#FFF}.update-pic-dialog
+.hd{position:relative;height:40px;line-height:40px;background:#F3F3F3;border-bottom:1px solid #E6E6E6}.update-pic-dialog .hd
+.title{overflow:hidden;padding:0
+50px;height:40px;line-height:40px;text-align:center}.update-pic-dialog .hd .close-btn{position:absolute;right:15px;top:15px;display:inline-block;width:11px;height:11px;background-image:url(https://img1.write.qq.com/writer/p1/contentv2/sprite.png);background-position:-68px -12px}.update-pic-dialog
+.bd{padding:35px
+30px}.update-pic-dialog .bd .update-add-box{float:left;overflow:hidden;position:relative;width:120px;height:158px;padding:1px;border:1px
+solid #DDD;background:#F1F1F1 url(https://img1.write.qq.com/writer/p1/contentv2/photo_add.png) no-repeat}.update-add-box
+img{position:absolute;top:1px;left:1px;z-index:3}.update-add-box .update-btn{width:120px;height:158px;position:absolute;top:1px;left:1px;background:none;z-index:1}.update-add-box .update-btn .upload-btn-hide{position:absolute;left:1px;top:1px;width:120px;height:158px;font-size:23px;opacity:0;filter:alpha(opacity=0);z-index:1;cursor:pointer}.update-pic-dialog .bd
+.cont{float:left;width:255px;padding-left:20px}.update-pic-dialog .bd .cont
+.text{line-height:20px;font-size:12px;color:#999;padding-top:20px}.update-pic-dialog .bd .cont .add-btn{position:relative;display:inline-block;text-align:center;width:120px;height:36px;line-height:36px;background:#4EA8FF;-webkit-border-radius:2px;-moz-border-radius:2px;-o-border-radius:2px;border-radius:2px;color:#FFF}.update-pic-dialog .bd .cont .add-btn:hover{background:#3D8CD9}.update-pic-dialog .bd .cont .add-btn
+em{position:absolute;left:0;top:0;display:inline-block;text-align:center;width:120px;height:36px;z-index:1;cursor:pointer}.update-pic-dialog .bd .cont .add-btn .file-btn{position:absolute;left:0;top:0;z-index:2;display:block;width:120px;height:36px;font-size:23px;opacity:0;filter:alpha(opacity=0)}.revisions{width:700px;height:468px;background:#FAFAFA}.revision-list{position:relative;float:left;width:191px;border-right:1px solid #E6E6E6;overflow:hidden}.revision-list
+h4{padding:28px
+0 10px 20px;background:#F6F6F6;font:12px/1 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";color:#999;border-bottom:1px solid #E6E6E6}.revision-list
+li{padding:10px
+20px;border-bottom:1px solid #E6E6E6;overflow:hidden;*zoom:1;cursor:pointer}.revision-list li
+h5{margin-bottom:12px;font:14px/1.8 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif"}.revision-list li h5
+span{float:right;margin-top:7px;font:12px/1 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";color:#999}.revision-list
+li.act{background:#D8EAFB}.revision-list li.act
+h5{color:#537DA4}.revision-list li
+p{font:12px/1 Arial}.revision-content{width:508px;height:425px}.revision-chapter
+h4{width:468px;height:35px;margin:0
+auto 10px;border-bottom:1px solid #E6E6E6;font:14px/35px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";overflow:hidden;*zoom:1}.revision-chapter h4
+span{float:right;color:#999;font:12px/35px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif"}.revision-chapter h4 span
+em{margin:0
+4px;font-family:Arial}.revision-chapter .text-content{padding:0
+20px}.revision-chapter .text-content
+p{text-indent:2em;font:14px/1.8 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif"}.revision-chapter .author-say{margin-top:20px}.revision-chapter .author-say
+p{color:#999}.revision-content
+.recover{display:block;width:123px;height:34px;font:14px/34px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";margin:30px
+auto 0}.select-site{width:180px;height:30px;margin-right:80px;border:1px
+solid #DDD}.workSetList li .select-category{width:188px;margin-right:56px}.select-category
+select{width:86px;height:30px;margin-right:8px;border:1px
+solid #DDD}.workSetList li .select-level{width:200px;margin-right:0}.workSetList li .select-level
+select{width:86px;height:30px;border:1px
+solid #DDD}.titleBtn .btn-disabled{opacity:0.5}.titleBtn .btn-disabled:hover{background:#4EA8FF}.tinyMCE-wrap{height:540px}.input-big-title{padding-left:0;margin:0
+-56px 10px 0;border:0}.input-big-title>input::-moz-placeholder{font-size:32px}.input-big-title>input:-ms-input-placeholder{font-size:32px}.input-big-title>input::-webkit-input-placeholder{font-size:32px}.input-big-title>input{position:relative;font-size:32px;height:50px;padding:0;line-height:50px;right:0}.input-big-title
+.ui_input_count{right:6px;line-height:52px;font-size:14px;color:#9DA9B3;visibility:hidden}.textarea-short-des{position:relative;overflow:inherit;padding:0;margin-bottom:10px}.textarea-short-des>textarea{overflow:hidden;right:0}.textarea-short-des
+.ui_textarea_count{font-size:14px;bottom:auto;left:auto;right:-56px;top:0;visibility:hidden}.textarea-short-des :focus ~ .ui_textarea_count,
+.input-big-title :focus~.ui_input_count{animation:fadeIn .25s;visibility:visible}.toolbar-fixed{position:fixed !important;z-index:3 !important;left:50%;margin-left:-320px !important;top:163px;height:50px !important;width:640px !important}#mceu_3 .mce-txt,
+#mceu_3 .mce-caret{display:none}.mce-menubar{display:none !important}.mce-open{display:none !important}blockquote{margin: .8em 0;padding:0
+0 0 10px;font-style:normal;font-size:100%;line-height:22px;border-left:3px solid #D0E5F2}blockquote
+p{margin:0
+!important}.mce-last{border:none !important}.mce-toolbar-grp{padding:0
+0 0 16px !important;height:38px !important;background:#FFF !important;border-radius:2px}.mce-toolbar-grp.fixed{position:fixed !important;left:50% !important;top:67px !important;width:622px !important;margin-left:-320px !important;margin-left:calc(-320px + 0.5 * (100vw - 100%)) !important}.mce-floatpanel{display:none !important}.mce-btn-group~.mce-btn-group{border:0
+!important}.mce-container-body .mce-flow-layout-item{margin:0;padding:0}.mce-btn-group .mce-btn{width:33px;height:38px;margin:0
+4px 0 0 !important;border:0
+!important;background:#FFF !important}.mce-btn
+button{width:20px;height:20px;padding:0
+!important;margin:8px
+0 0 10px !important;background:#FFF !important;border:0
+!important}.mce-ico:before{display:block;font-size:14px;color:#9DA9B3;text-align:center}.mce-ico:hover:before{color:#ADBAC5;transition:color 0.5s}.mce-i-h:before{content:"\e900"}.mce-i-myimage:before{content:"\e014"}.mce-i-myvideo:before{content:"\e015"}.mce-i-mylink:before{content:"\e011"}.mce-i-myvote:before{content:"\e902"}.mce-i-mybook:before{content:"\e901"}.mce-active
+button{background-color:#E4E8EB !important}.mce-flow-layout{background:#FFF !important}.mce-path,.mce-wordcount{display:none !important}.button-creat{padding:18px
+0;border-top:1px solid #E4E8EB;background:#FFF}.button-creat
+ul{width:1180px;margin:0
+auto;text-align:right}.button-creat
+li{display:inline;margin-left:12px}.button-creat .btn-blue{display:inline-block;width:96px;height:34px;line-height:34px;text-align:center;color:#419AD9;border:1px
+solid #419AD9;border-radius:100px;transition:background-color .15s}.button-creat .btn-blue:hover{background-color:#F0F8FF}.button-creat
+.ui_button_primary{padding:0
+30px}.search-book{width:560px;margin:16px
+auto 46px auto}.search-book .ui_input>input{border-radius:100px}.search-book
+.ui_icon_search{top:8px;left:16px;border:0}.preview-content{padding:30px
+0;margin:0
+-25px -20px -25px;border-top:1px solid #EBEEF0;background:#F7FBFF}.book-show{margin-bottom:16px}.book-show-pic{width:150px;height:200px;margin:0
+auto 20px auto;box-shadow:0px 4px 8px rgba(0,0,0,0.16)}.book-pic-img{width:100%;height:100%;visibility:hidden}.book-pic-img[src]{visibility:visible}.book-show-ttl{margin-bottom:8px;text-align:center;font-size:16px}.book-show-author{color:#9DA9B3;text-align:center}.book-preview .input-box{text-align:center}.book-preview .input-box
+li{display:inline-block;margin:0
+10px;color:#9DA9B3}.book-preview
+.ui_radio{margin-right:5px}.ui_datalist_value .mce-ico{line-height:18px}.video-adress{width:560px;margin:0
+auto 14px auto}.video-adress
+.info{margin-top:14px;color:#9DA9B3}.video-preview{padding:48px
+0}.video-content{width:398px;height:331px;line-height:331px;margin:0
+auto;border:1px
+solid #E4E8EB;background-color:#FFF;color:#9DA9B3;text-align:center;font-size:16px}.video-content embed,
+.video-content
+iframe{vertical-align:top;width:100%;height:100%}.inser-link{padding-top:15px}.create-vote-tab{margin:0
+-25px -1px -25px;text-align:center}.create-vote-tab
+.ui_tab_tab{display:inline-block;float:none}.vote-preview{padding:24px
+48px}.already-vote
+table{width:100%;border-collapse:collapse}.already-vote .vote-overflow{max-height:273px;overflow-y:auto}.already-vote
+th{height:60px;line-height:60px;color:#9DA9B3;border-bottom:1px solid #E4E8EB}.already-vote
+td{padding:35px
+0;font-size:13px}.already-vote .label-text{margin-left:10px;font-weight:bold}.article-auto{margin-top:30px;padding:10px
+0;border-top:1px solid #E4E8EB;overflow:hidden}.img-upload-form{display:none}.active-list-wrap{padding:40px
+0 0 40px}.active-list-wrap
+ul{width:990px}.active-list-wrap
+li{float:left;width:280px;margin:0
+50px 60px 0}.active-list-wrap li .img-box{position:relative;z-index:1;height:120px;margin-bottom:12px}.active-list-wrap li .img-box
+span{position:absolute;left:0;top:0;z-index:1;padding:0
+10px;height:26px;color:#FFF;text-align:center;font:14px/26px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";background:#3DCC85}.active-list-wrap li .img-box
+img{display:block;width:100%;height:100%}.active-list-wrap li
+h4{margin-bottom:10px;height:22px;overflow:hidden;font:700 16px/22px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif"}.active-list-wrap li
+p{height:60px;margin-bottom:12px;font:14px/20px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";overflow:hidden}.active-list-wrap li .blue-btn{display:block;width:88px;height:28px;font:14px/28px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei","sans-serif"}.buy-out-wrap{padding:30px
+20px}.buy-out-wrap .btn-wrap
+.button{display:block;width:86px;height:28px;font:12px/26px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif"}.buy-out-wrap .right-btn{margin:8px
+10px 0 0}.buy-out-wrap .right-btn
+.button{display:block;border:1px
+solid #419AD9;width:86px;height:28px;font:12px/26px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei","sans-serif"}.zw-main-wrap{padding:50px
+0}.zw-main-wrap .main-center{width:640px;margin:0
+auto}.zw-main-wrap .content
+h1{max-height:56px;margin-bottom:28px;font:28px/56px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";text-align:center}.zw-main-wrap .content
+img{display:block;margin:0
+auto 16px;max-width:640px}.zw-main-wrap .content .zw-info{padding-bottom:16px;border-bottom:1px solid #D5D5D5}.zw-main-wrap .content .zw-info
+span{font:12px/24px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";margin-left:40px}.zw-main-wrap .content .zw-info span:first-child{margin-left:0}.zw-main-wrap .content .zw-info span
+em{width:16px;height:16px;margin:-3px 16px 0 0}.zw-main-wrap .content .zw-info span em.end-time{background-position:0 -340px}.zw-main-wrap .content .zw-info span
+em.date{background-position:-17px -340px}.zw-main-wrap .content
+h3{font:16px/1 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";padding-left:7px;margin:40px
+0 16px;border-left:4px solid #8FD4FF;color:#333}.zw-main-wrap .content
+h4{color:#333;font:14px/24px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif"}.zw-main-wrap .content
+p{margin:0.8em 0;font:14px/24px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif"}.zw-main-wrap .content p
+span{margin-right:10px}.zw-main-wrap .content
+ol{padding-top:2px}.zw-main-wrap .content ol
+li{list-style:decimal;margin:0.8em 0 0.8em 16px;font:14px/24px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";color:#666}.zw-main-wrap .content
+.line{margin:30px
+0;border-bottom:1px solid #D5D5D5}.zw-main-wrap .content .btn-wrap{text-align:center}.zw-main-wrap .content .btn-wrap
+.button{display:inline-block;width:280px;height:52px;font:18px/52px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif"}.zw-main-wrap .flow-wrap{padding-bottom:80px}.zw-main-wrap .flow-wrap .flow-list{position:relative;z-index:1;overflow:hidden}.zw-main-wrap .flow-wrap
+.line{position:absolute;z-index:1;left:9px;top:-70px;width:2px;height:100%;background:#419AD9}.zw-main-wrap .flow-wrap
+.opacity{position:absolute;z-index:3;top:0;left:0;width:20px;height:100%;background-image:-moz-linear-gradient(top, rgba(255, 255, 255, 0), white);background-image:-webkit-linear-gradient(top, rgba(255, 255, 255, 0), white);background-image:-o-linear-gradient(top, rgba(255, 255, 255, 0), white);background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%)}.zw-main-wrap .flow-wrap
+ul{position:relative;z-index:2}.zw-main-wrap .flow-wrap
+li{overflow:hidden;*zoom:1;margin-top:24px}.zw-main-wrap .flow-wrap li:first-child{margin-top:0}.zw-main-wrap .flow-wrap li
+span{float:left;width:8px;height:8px;margin:4px
+28px 0 4px;border:2px
+solid #419AD9;border-radius:100%;background:#FFF}.zw-main-wrap .flow-wrap li span, .zw-main-wrap .flow-wrap li h5, .zw-main-wrap .flow-wrap li .time-info{float:left}.zw-main-wrap .flow-wrap li
+h5{max-width:128px;height:16px;margin:1px
+24px 0 0;font:16px/1 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";overflow:hidden;text-overflow:clip}.zw-main-wrap .flow-wrap li.num
+span{width:16px;height:16px;margin:0
+24px 0 0;background:#419AD9;color:#FFF;text-align:center;font:12px/16px Arial}.zw-main-wrap .flow-wrap li.num
+h5{color:#1FA9FF}.zw-main-wrap .flow-wrap li .time-info{width:440px}.zw-main-wrap .flow-wrap li .time-info
+em{display:inline-block;padding:3px
+5px;margin-bottom:9px;font:12px/1 Arial;border:1px
+solid #999;border-radius:100px}.zw-main-wrap .flow-wrap li .time-info
+cite{display:block;font:14px/1.5 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei","sans-serif";color:#575757}.submission-methods-wrap{padding:20px
+0 0 44px}.submission-methods-wrap
+h3{font:14px/28px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif"}.submission-methods-wrap .methods-list
+ul{padding:140px
+0 0 140px}.submission-methods-wrap .methods-list
+li{float:left;width:280px;margin-left:100px;text-align:center}.submission-methods-wrap .methods-list li:first-child{margin-left:0}.submission-methods-wrap .methods-list li
+.box{padding-top:50px;height:230px;border:1px
+solid #D2EEFF;border-bottom:none}.submission-methods-wrap .methods-list li .box .icon-box{position:relative;z-index:1;width:89px;height:89px;margin:0
+auto 30px;border:1px
+solid #419AD9;border-radius:100%;background:#E8F6FF}.submission-methods-wrap .methods-list li .box .icon-box
+span{position:absolute;z-index:1;left:50%;top:50%;margin:-20px 0 0 -15px;width:38px;height:40px}.submission-methods-wrap .methods-list li .box
+h4{margin-bottom:10px;font:22px/28px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif"}.submission-methods-wrap .methods-list li .box
+p{font:12px/14px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";color:#999}.submission-methods-wrap .methods-list li
+.btn{display:block;font:16px/48px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";background:#50A8FF;color:#FFF}.submission-methods-wrap .methods-list li
+.btn.disabled{color:#419AD9;color:rgba(78, 168, 255, 0.4);cursor:default;background:#E8F6FF}.submission-methods-wrap .methods-list li.add-new .icon-box
+span{background-position:-39px -358px}.submission-methods-wrap .methods-list li.add-old .icon-box
+span{background-position:0 -358px}.dialog-edit-wrap .dialog-chapter-box{width:100%;height:55px;border-bottom:1px solid #E6E8EC}.dialog-edit-wrap .dialog-chapter-box .dialog-chapter-name{width:762px;padding:10px
+24px;height:35px;line-height:35px;font-size:16px}.dialog-edit-wrap .dialog-text-content{height:505px;overflow:hidden}.dialog-edit-wrap .dialog-text-content dl
+dd{position:relative;z-index:2;padding:12px
+0 12px 24px;transition:background .3s}.dialog-edit-wrap .dialog-text-content dl dd:hover{background:#F8FAFC}.dialog-edit-wrap .dialog-text-content dl dd:hover .dialog .edit-btn{opacity:1;filter:alpha(opacity=100)}.dialog-edit-wrap .dialog-text-content dl dd
+h3{font-size:0;margin-bottom:8px}.dialog-edit-wrap .dialog-text-content dl dd h3 img, .dialog-edit-wrap .dialog-text-content dl dd h3
+span{display:inline-block;vertical-align:middle}.dialog-edit-wrap .dialog-text-content dl dd h3
+img{width:31px;height:31px;border:1px
+solid #DDD;border-radius:100%;margin-right:8px}.dialog-edit-wrap .dialog-text-content dl dd h3
+span{font:14px/1 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";color:#8592A6}.dialog-edit-wrap .dialog-text-content dl dd
+p{display:inline-block}.dialog-edit-wrap .dialog-text-content dl dd
+.dialog{display:inline-block;position:relative;z-index:1}.dialog-edit-wrap .dialog-text-content dl dd .dialog .edit-btn{opacity:0;filter:alpha(opacity=0);position:absolute;top:50%;right:-130px;font-size:0;margin-top:-18px;transition:opacity .3s}.dialog-edit-wrap .dialog-text-content dl dd .dialog .edit-btn
+a{display:inline-block;vertical-align:middle;width:31px;height:31px;border:1px
+solid #419AD9;border-radius:100%;margin-left:8px}.dialog-edit-wrap .dialog-text-content dl dd .dialog .edit-btn a.edit
+em{width:15px;height:14px;background-position:0 -136px}.dialog-edit-wrap .dialog-text-content dl dd .dialog .edit-btn a.del
+em{width:13px;height:16px;margin-top:7px;background-position:0 -119px}.dialog-edit-wrap .dialog-text-content dl dd .dialog .edit-btn a.add
+em{width:13px;height:13px;margin-top:9px;background-position:0 -23px}.dialog-edit-wrap .dialog-text-content dl dd .dialog .edit-btn a:first-child{margin-left:0}.dialog-edit-wrap .dialog-text-content dl dd .dialog .edit-btn a:hover{background:#D9E9FF}.dialog-edit-wrap .dialog-text-content dl dd .dialog .edit-btn a
+em{display:block;margin:8px
+auto 0}.dialog-edit-wrap .dialog-text-content dl
+cite{position:absolute;z-index:1;right:0;top:0;padding:0
+10px;width:24px;height:100%;color:#8592A6;text-align:center;background:#F2F6FA}.dialog-edit-wrap .dialog-text-content dl cite:after{content:'';display:inline-block;vertical-align:middle;height:100%}.dialog-edit-wrap .dialog-text-content dl cite
+i{display:inline-block;vertical-align:middle;text-align:center;font-family:Arial;font-size:14px}.dialog-edit-wrap .dialog-text-content
+.aside{text-align:center}.dialog-edit-wrap .dialog-text-content .aside
+.dialog{display:inline-block;max-width:384px;min-width:100px;padding:12px
+16px;border-radius:4px;background:#E6E8EC;margin:0
+auto}.dialog-edit-wrap .dialog-text-content .aside .dialog
+p{font:14px/22px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";color:#525A66;text-align:left}.dialog-edit-wrap .dialog-text-content .costar
+.dialog{max-width:528px;border:1px
+solid #E6E8EC;border-radius:4px;padding:12px
+16px}.dialog-edit-wrap .dialog-text-content .costar .dialog
+p{font:14px/22px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";color:#111}.dialog-edit-wrap .dialog-text-content
+.protagonist{overflow:hidden;padding:12px
+60px 12px 24px}.dialog-edit-wrap .dialog-text-content .protagonist
+h3{overflow:hidden;text-align:right}.dialog-edit-wrap .dialog-text-content .protagonist h3
+img{float:right;margin-right:0;margin-left:8px}.dialog-edit-wrap .dialog-text-content .protagonist h3
+span{margin-top:10px}.dialog-edit-wrap .dialog-text-content .protagonist
+.dialog{max-width:528px;float:right;border:1px
+solid #E6E8EC;border-radius:4px;padding:12px
+16px;background:#3981E6}.dialog-edit-wrap .dialog-text-content .protagonist .dialog .edit-btn{right:auto;left:-128px}.dialog-edit-wrap .dialog-text-content .protagonist
+p{font:14px/22px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";color:#FFF}.dialog-edit-wrap .dialog-text-content .insert-row{z-index:1;padding:0;text-align:center;animation:flash .8s linear}.dialog-edit-wrap .dialog-text-content .insert-row
+b{position:absolute;left:50%;margin-left:-5px;width:0;height:0}.dialog-edit-wrap .dialog-text-content .insert-row b.arrow-up{top:0;border-bottom:0 none;border-right:4px solid transparent;border-top:4px solid #CED2D9;border-left:4px solid transparent}.dialog-edit-wrap .dialog-text-content .insert-row b.arrow-down{bottom:0;border-top:0 none;border-right:4px solid transparent;border-bottom:4px solid #CED2D9;border-left:4px solid transparent}.dialog-edit-wrap .dialog-text-content .insert-row .insert-tip{height:40px;background:#F8FAFC}.dialog-edit-wrap .dialog-text-content .insert-row .insert-tip
+span{font:12px/40px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei","sans-serif";color:#8592A6}.dialog-text-tool{border-top:1px solid #E6E8EC;height:223px}.dialog-text-tool.act{border:1px
+solid #419AD9}.dialog-text-tool .select-character{height:48px}.dialog-text-tool .select-character
+dd{position:relative;z-index:1;float:left;width:30px;height:30px;border:1px
+solid #DDD;border-radius:100%;margin:8px
+8px 0 0;text-align:center;transition:margin-top .3s;cursor:pointer}.dialog-text-tool .select-character dd:hover{margin-top:6px}.dialog-text-tool .select-character dd:hover
+span{display:block}.dialog-text-tool .select-character
+dd.act{border:1px
+solid #3981E8;box-shadow:0 0 0 1px #3981E8}.dialog-text-tool .select-character dd>img{top:0;left:0;width:30px;height:30px;border-radius:100%}.dialog-text-tool .select-character dd
+span{display:none;position:absolute;z-index:1;top:-26px;left:-7px;right:auto;padding:0
+4px;height:18px;border-radius:2px;font:12px/16px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";background:#525A66;white-space:nowrap;text-align:center;color:#FFF}.dialog-text-tool .select-character dd.protagonist
+span{left:-10px}.dialog-text-tool .select-character
+dd.aside{width:32px;height:32px;margin-left:8px;border:none;font-size:12px;line-height:1.2;background:#F0FFF7;color:#3DCC85}.dialog-text-tool .select-character dd.aside
+img{width:32px;height:32px}.dialog-text-tool .select-character dd.aside
+span{left:0}.dialog-text-tool .select-character
+dd.aside.act{box-shadow:0 0 0 1px #3DCC85}.dialog-text-tool .select-character
+dd.line{border:none;margin-top:0;width:1px;height:48px;background:#E6E8EC;background-image:-moz-linear-gradient(top, rgba(255, 255, 255, 0), white);background-image:-webkit-linear-gradient(top, rgba(255, 255, 255, 0), white);background-image:-o-linear-gradient(top, rgba(255, 255, 255, 0), white);background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%);cursor:default;box-shadow:none}.dialog-text-tool .select-character
+dd.btn{border:none;box-shadow:none}.dialog-text-tool .select-character dd.btn
+span{left:-11px}.dialog-text-tool .select-character dd
+a{width:31px;height:31px;display:block;border-radius:100%;border:1px
+solid #419AD9}.dialog-text-tool .select-character dd a:hover{background:#D9E9FF}.dialog-text-tool .select-character dd a
+em{display:block}.dialog-text-tool .select-character dd a
+em.more{width:16px;height:4px;margin:14px
+auto 0;background-position:0 -167px}.dialog-text-tool .select-character dd a
+em.add{width:16px;height:16px;margin:6px
+auto 0;background-position:0 -36px}.dialog-text-tool .select-character dd a
+em.setting{width:16px;height:16px;margin:6px
+auto 0;background-position:0 -151px}.dialog-text-tool .all-character-list{display:none;position:absolute;z-index:10;bottom:140%;left:-104px;width:238px;height:286px;border:1px
+solid #CED2D9;border-radius:3px;box-shadow:0 2px 8px 0 #CED2D9;background:#FFF}.dialog-text-tool .all-character-list
+.triangle{position:absolute;bottom:-6px;left:50%;margin-left:-5px;border-bottom:0 none;border-right:5px solid transparent;border-top:5px solid #CED2D9;border-left:5px solid transparent;width:0;height:0}.dialog-text-tool .all-character-list .triangle
+i{position:absolute;bottom:1px;right:-5px;border-bottom:0 none;border-right:5px solid transparent;border-top:5px solid #FFF;border-left:5px solid transparent;width:0;height:0}.dialog-text-tool .all-character-list
+h5{text-align:left;padding:0
+16px;height:39px;border-bottom:1px solid #CED2D9;background:#FAFBFC;font:12px/38px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif"}.dialog-text-tool .all-character-list
+li{height:48px;text-align:left;transition:background .3s}.dialog-text-tool .all-character-list li:hover{background:#F2F6FA}.dialog-text-tool .all-character-list li img, .dialog-text-tool .all-character-list li
+cite{display:inline-block;vertical-align:middle}.dialog-text-tool .all-character-list li
+img{width:31px;height:31px;border:1px
+solid #DDD;border-radius:100%;margin-right:12px}.dialog-text-tool .all-character-list li
+cite{font:12px/48px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif"}.dialog-text-tool .all-character-list li
+p{padding:0
+20px;font-size:0}.edit-dialog-text-wrap{padding:8px}.edit-dialog-text-wrap
+h3{margin-bottom:12px;color:#8592A6;font:12px/16px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif"}.edit-dialog-text-wrap h3
+span{display:inline-block;vertical-align:middle;padding:0
+6px;height:16px;margin-right:5px;border:1px
+solid #CED2D9;border-radius:12px;background:#F2F6FA;text-align:center}.edit-dialog-text-wrap .edit-text-area{margin-bottom:8px}.edit-dialog-text-wrap
+textarea{padding:2px
+4px;width:784px;height:76px;border:none;font:14px/22px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif"}.edit-dialog-text-wrap .btn-box{padding-right:6px;overflow:hidden;font:12px/30px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif"}.edit-dialog-text-wrap .btn-box a, .edit-dialog-text-wrap .btn-box
+span{float:right}.edit-dialog-text-wrap .btn-box
+span{margin-right:12px;color:#8292A8}.edit-dialog-text-wrap .btn-box
+.button{min-width:66px;padding:0
+10px;height:30px;border-radius:2px;border:1px
+solid #3981E6;background:#3981E6}.edit-dialog-text-wrap .btn-box
+.button.white{background:#FFF;border:1px
+solid #CED2D9}.edit-dialog-text-wrap .btn-box
+.white{margin-right:10px}

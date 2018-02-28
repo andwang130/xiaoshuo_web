@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <link rel="stylesheet" href="../../static/css/contentv2_base.css">
+    <link rel="stylesheet" href="../../static/css/contentv2_index.css">
+    <script src="../../static/js/jQuery.js"></script>
+    <link rel="stylesheet" href="../../static/css/contentv2_book_manage.css">
+
+
+</head>
+<body>
+<div class="wrap">
+     <div class="header">
+    <div class="headBox pageCenter cf">
+      <a href="/index.html">
+        <img class="logo fl" src="https://img1.write.qq.com/writer/p1/contentv2/logo.png" width="225" height="28" alt="阅文·作家专区">
+      </a>
+      <div class="headUser fr">
+        <ul class="cf">
+
+          <li class="line"></li>
+          <li id="headPhotoBox" class="headPhoto">
+            <p><em><img src="https://img1.write.qq.com/writer/p1/contentv2/photo_default.png" width="36" height="36" alt=""></em><a class="userName" href="javascript:">v1列子御风</a></p>
+            <dl class="userBox">
+              <cite class="icon whiteSj"></cite>
+              <dd class="userInfo hidden">
+                  <!-- 增加身份标识"ico-level",silver为白金作家，dashen为大神作家 -->
+                <p class="name" title="v1列子御风">v1列子御风
+
+                </p>
+                <p class="level">
+
+                <span><em style="width:70%">0/0</em></span></p>
+              </dd>
+              <dd class="link end"><a href="/public/logout.html">退出登录</a></dd>
+            </dl>
+          </li>
+        </ul>
+      </div>
+    </div>
+</div>
+</div>
+<!-- start banner -->
+
+<!-- end banner -->
+<!-- 黄条提示 -->
+<div id="warnTipBox" class="warningWrap" style="display:none;">
+    <div class="pageCenter">
+      <p><span class="icon alert"></span><span id="warnTip"></span></p>
+      <a id="warnTipCloseBtn" class="icon close" href="javascript:" title="关闭"></a></div>
+</div>
+<!--更改VIP管理密码-->
+<div id="modifyPwdPopup" class="popupWrap w380" style="display:none;">
+  <a data-node="closeBtn" class="icon closePopup" href="javascript:"></a>
+  <h3>更改VIP管理密码</h3>
+  <div class="popupBody p30">
+    <div class="popupContent">
+      <p>原密码</p>
+      <p class="mb20">
+        <input data-node="originalPwdInput" class="longInput" type="password" value="">
+      </p>
+      <p>新密码</p>
+      <p class="mb20">
+        <input data-node="newPwdInput" class="longInput" type="password" value="">
+        <i class="f12 c999">6~16位英文、数字或特殊字符</i>
+      </p>
+
+      <p>再次输入新密码</p>
+      <p class="mb20">
+        <input data-node="repeatNewPwdInput" class="longInput" type="password" value="">
+      </p>
+    </div>
+    <center class="confirmBtn">
+        <a data-node="submitBtn" class="button full" href="javascript:">提交</a>
+    </center>
+  </div>
+</div>
+    <div class="mainWrap pageCenter cf">
+        <div id="leftNav" class="mainLeft fl" style="visibility: visible;">
+            <div class="sideBar" id="main-bar">
+                <ul>
+                      <li>
+                        <a href="/authon/index.html"><span class="home"></span>专区首页</a>
+                    </li>
+                    <li class="act">
+                        <a href="/authon/novels.html"><span class="works"></span>作品管理</a>
+                    </li>
+                    <li><a href="/authon/takeindex.html"><span class="data-icon"></span>数据统计</a>
+                          <!-- start 工具栏提示 -->
+                                          </li>
+                    <!---->
+                    <li>
+                        <a href="/authon/income.html"><span class="income"></span>稿酬收入</a>
+                    </li>
+                      </ul>
+            </div>
+
+            <!-- start 小屏下的列表-->
+            <div class="sideBar min-bar" id="min-bar">
+                <ul>
+                    <li>
+                    <a class="min-link" href="/index.html"><span class="icon home"></span></a>
+                    <a class="expand" href="/index.html">专区首页</a>
+                    </li>
+                    <li class="act">
+                        <a class="min-link" href="/booknovels/novels.html"><span class="icon works"></span></a>
+                        <a class="expand" href="/booknovels/novels.html">作品管理</a>
+                    </li>
+
+                    <li>
+                        <a class="min-link" href="/booknovelsvip/takeindex.html"><span class="icon reserve"></span></a>
+                        <a class="expand" href="/booknovelsvip/takeindex.html">数据统计</a>
+                    </li>
+
+
+                    <li>
+                        <a class="min-link" href="/income/index.html"><span class="icon income"></span></a>
+                        <a class="expand" href="/income/index.html">稿酬收入</a>
+                    </li>
+                    <li>
+                        <a class="min-link" href="/labor.html"><span class="icon labour"></span></a>
+                        <a class="expand" href="/labor.html">劳务收入</a>
+                    </li>
+
+
+                    <li>
+                        <a class="min-link" href="/authors/authorconsultlist.html"><span class="icon counsel"></span></a>
+                        <a class="expand" href="/authors/authorconsultlist.html">作家咨询</a>
+                    </li>
+
+                    <li>
+                        <a class="min-link" href="/integral_exchange/exchange.html"><span class="icon exchange"></span></a>
+                        <a class="expand" href="/integral_exchange/exchange.html">积分兑换</a>
+                    </li>
+                    <li>
+                        <a class="min-link" href="/interactivechapter/index.html"><span class="icon active"></span></a>
+                        <a class="expand" href="/interactivechapter/index.html">互动管理</a>
+                    </li>
+
+                    <!--微信管理-->
+                </ul>
+            </div>
+            <!-- end 小屏下的列表-->
+
+        </div>
+
+<div class="mainRight pb260 fl">
+
+        <div class="crumbsWrap">
+        <b></b> <i class="before"><span><a href="/booknovels/novels.html">作品管理</a></span></i><em class="diff"></em>
+        <i class="current"><span>作品创建</span></i>
+    </div>
+
+    <center class="stepTitle">
+        <span class="act">1</span><em class="actText">选择类型</em><i class="icon"></i><span class="act">2</span><em class="actText">完善作品信息</em><i class="icon nogt"></i><span>3</span><em>创建成功</em>
+    </center>
+            <form name="formbooknovelsnew" id="formbooknovelsnew" method="post" action="/booksubmit/createbooksubmit.html" novalidate="novalidate">
+    <div class="workStepList step2">
+
+            <!-- 站点类型 -->
+            <input id="siteTypeHidden" name="site" type="hidden" value="1">
+            <input id="artidx" type="hidden" name="artidx" value="0">
+            <input id="selectid" type="hidden" name="selectid" value="0">
+           <ul>
+
+
+                <li> <em>作品名称</em>
+                    <input class="long" id="bookName" name="title" type="text" value="">
+                    <cite data-node="ok" class="icon ok" style="display:none;"></cite>
+                    <p data-node="tip" class="tip">15字内，请勿添加书名号等特殊符号</p>
+                    <p data-node="error" style="display:none;" class="error"></p>
+                </li>
+                <li class="zIndexTop cf"><em>作品类型</em>
+                    <div class="selectBox cf">
+                        <!-- 主分类选择器 -->
+                        <select class="bigClass" id="novelMainCategorySelect" name="storyclass">
+
+                            <option value="20001">玄幻</option><option value="20005">奇幻</option><option value="20010">武侠</option><option value="20014">仙侠</option><option value="20019">都市</option><option value="20028">历史</option><option value="20032">军事</option><option value="20037">灵异</option><option value="20042">科幻</option><option value="20050">游戏</option><option value="20054">体育</option><option value="20059">二次元</option><option value="20065">现实</option><option value="20076">短篇</option>                        </select>
+
+                        <!-- 子分类选择器 -->
+                        <cite data-node="ok" class="icon ok" style="display:none;"></cite>
+                        <p data-node="error" style="display:none;" class="error"></p>
+                    </div>
+                    <p class="tag-intro" id="tag-intro"></p>
+                    <!-- 分类对应的活动条目容器 -->
+                    </li>
+               <li id="activityList" class="show-match-popup">
+                   <em>作品等级</em>
+                   <div class="selectBox cf">
+                    <select class="bigClass" id="freeSelect" name="storyclass">
+                   <option value="">免费</option><option value="20001">vip</option></select>
+                   </div>
+
+               </li>
+
+                <li> <em>作品标签</em>
+                    <div id="selectedNovelTagList" class="filterTagBox"></div>
+                    <input id="tagIdListHidden" name="taglistId" type="hidden" value="">
+                </li>
+
+                <!-- 云起站点特有 -->
+
+                    <div id="yqItemBox" style="display: none">
+                                                                </div>
+
+
+                <li><em>作品介绍</em>
+                    <textarea id="introduction" name="intro"></textarea>
+                    <cite data-node="ok" class="icon ok" style="display:none;"></cite>
+                    <p data-node="tip" class="tip">20~300字</p>
+                    <p data-node="error" style="display:none;" class="error"></p>
+                </li>
+                        </ul>
+            <div class="stepBtn"> <a class="button" id="createNovelBtn" href="javascript:">创建作品</a> <a class="c999 f12" href="javascript:history.go(-1)">返回上一步</a> </div>
+<!--        <input type="hidden" name="__hash__" value="f2e67af656f74422b585849bd739156e_3e12653bc4d35018ab80d3460f4b99d6" /></form>-->
+    </div>
+
+    <input type="hidden" name="__hash__" value="f2e67af656f74422b585849bd739156e_3e12653bc4d35018ab80d3460f4b99d6"></form>
+
+    <!-- 作品标签选择浮层 -->
+    <div id="novelTagPopup" class="popupWrap popupTag" style="display:none;"> <a id="novelTagPopup_closeBtn" class="icon closePopup" href="javascript:" title="关闭"></a>
+        <h3>作品标签</h3>
+        <div class="tagFilterList">
+            <p>请选择最多4个作为您的作品标签，每类中限选一个：</p>
+            <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 350px;"><ul id="novelTagPopup_tagList" style="overflow: hidden; width: auto; height: 350px;">
+                <li> <span>风格</span>
+                        <div class="tagFilter">
+                            <a data-tagid="21958" title="勇猛" href="javascript:">勇猛</a><a data-tagid="21959" title="淡定" href="javascript:">淡定</a><a data-tagid="21957" title="坚毅" href="javascript:">坚毅</a><a data-tagid="21956" title="机智" href="javascript:">机智</a><a data-tagid="21955" title="阳光" href="javascript:">阳光</a><a data-tagid="21122" title="腹黑" href="javascript:">腹黑</a><a data-tagid="21115" title="冷酷" href="javascript:">冷酷</a><a data-tagid="21114" title="热血" href="javascript:">热血</a><a data-tagid="21112" title="护短" href="javascript:">护短</a><a data-tagid="21108" title="猥琐" href="javascript:">猥琐</a><a data-tagid="21030" title="铁血" href="javascript:">铁血</a><a data-tagid="21027" title="励志" href="javascript:">励志</a><a data-tagid="21017" title="恶搞" href="javascript:">恶搞</a><a data-tagid="21014" title="爆笑" href="javascript:">爆笑</a><a data-tagid="21013" title="轻松" href="javascript:">轻松</a><a data-tagid="25001" title="嚣张" href="javascript:">嚣张</a><a data-tagid="25002" title="狡猾" href="javascript:">狡猾</a>                        </div>
+                    </li><li> <span>主角身份</span>
+                        <div class="tagFilter">
+                            <a data-tagid="21101" title="宅男" href="javascript:">宅男</a><a data-tagid="21070" title="医生" href="javascript:">医生</a><a data-tagid="21067" title="学生" href="javascript:">学生</a><a data-tagid="21064" title="老师" href="javascript:">老师</a><a data-tagid="21062" title="杀手" href="javascript:">杀手</a><a data-tagid="21061" title="特种兵" href="javascript:">特种兵</a><a data-tagid="21058" title="明星" href="javascript:">明星</a><a data-tagid="21053" title="黑客" href="javascript:">黑客</a><a data-tagid="21052" title="特工" href="javascript:">特工</a><a data-tagid="21049" title="盗贼" href="javascript:">盗贼</a><a data-tagid="21952" title="豪门" href="javascript:">豪门</a><a data-tagid="21950" title="孤儿" href="javascript:">孤儿</a><a data-tagid="25003" title="法师" href="javascript:">法师</a>                        </div>
+                    </li><li> <span>故事流派</span>
+                        <div class="tagFilter">
+                            <a data-tagid="21196" title="练功流" href="javascript:">练功流</a><a data-tagid="21964" title="争霸流" href="javascript:">争霸流</a><a data-tagid="21060" title="软饭流" href="javascript:">软饭流</a><a data-tagid="21910" title="穿越" href="javascript:">穿越</a><a data-tagid="21966" title="洪荒流" href="javascript:">洪荒流</a><a data-tagid="21967" title="学院流" href="javascript:">学院流</a><a data-tagid="21968" title="强者回归" href="javascript:">强者回归</a><a data-tagid="21131" title="重生" href="javascript:">重生</a><a data-tagid="21134" title="种田文" href="javascript:">种田文</a><a data-tagid="21135" title="随身流" href="javascript:">随身流</a><a data-tagid="21165" title="无限流" href="javascript:">无限流</a><a data-tagid="21193" title="技术流" href="javascript:">技术流</a><a data-tagid="21194" title="凡人流" href="javascript:">凡人流</a><a data-tagid="21528" title="无敌文" href="javascript:">无敌文</a><a data-tagid="21523" title="系统流" href="javascript:">系统流</a><a data-tagid="21121" title="废柴流" href="javascript:">废柴流</a><a data-tagid="21171" title="魔王附体" href="javascript:">魔王附体</a><a data-tagid="21175" title="召唤流" href="javascript:">召唤流</a><a data-tagid="25004" title="异兽流" href="javascript:">异兽流</a><a data-tagid="25005" title="感情" href="javascript:">感情</a>                        </div>
+                    </li><li> <span>故事元素</span>
+                        <div class="tagFilter">
+                            <a data-tagid="21961" title="赚钱" href="javascript:">赚钱</a><a data-tagid="21104" title="胖子" href="javascript:">胖子</a><a data-tagid="21084" title="龙" href="javascript:">龙</a><a data-tagid="21078" title="丧尸" href="javascript:">丧尸</a><a data-tagid="21077" title="僵尸" href="javascript:">僵尸</a><a data-tagid="21998" title="变身" href="javascript:">变身</a><a data-tagid="21999" title="群穿" href="javascript:">群穿</a><a data-tagid="22000" title="宠物" href="javascript:">宠物</a><a data-tagid="21138" title="盗墓" href="javascript:">盗墓</a><a data-tagid="21167" title="蜀山" href="javascript:">蜀山</a><a data-tagid="21180" title="玄学" href="javascript:">玄学</a><a data-tagid="21174" title="卡片" href="javascript:">卡片</a><a data-tagid="21176" title="位面" href="javascript:">位面</a><a data-tagid="21162" title="丹药" href="javascript:">丹药</a><a data-tagid="25006" title="魔兽" href="javascript:">魔兽</a><a data-tagid="25007" title="西游" href="javascript:">西游</a><a data-tagid="25008" title="LOL" href="javascript:">LOL</a><a data-tagid="25009" title="阵法" href="javascript:">阵法</a><a data-tagid="25010" title="吸血鬼" href="javascript:">吸血鬼</a><a data-tagid="25011" title="亡灵" href="javascript:">亡灵</a><a data-tagid="25012" title="鉴宝" href="javascript:">鉴宝</a><a data-tagid="25013" title="手游" href="javascript:">手游</a><a data-tagid="25014" title="鬼怪" href="javascript:">鬼怪</a><a data-tagid="25015" title="职场" href="javascript:">职场</a>                        </div>
+                    </li>            </ul><div class="slimScrollBar" style="background: rgb(204, 204, 204); width: 7px; position: absolute; top: 0px; opacity: 1; display: block; border-radius: 7px; z-index: 99; right: 1px;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(238, 238, 238); opacity: 1; z-index: 90; right: 1px;"></div></div>
+        </div>
+        <center class="confirmBtn">
+            <a id="novelTagPopup_confirmBtn" class="button" href="javascript:">确定</a>
+        </center>
+    </div>
+<img id="requestLoadingTip" class="loadImg" style="display:none;" src="https://img1.write.qq.com/writer/p1/contentv2/loading.gif"></div>
+<!-- start 交稿弹窗 -->
+
+ <script src="../../static/js/view_js/authon_login_chek.js"></script>
+<script src="../../static/js/view_js/createbook.js"></script>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <link rel="stylesheet" href="../../static/css/contentv2_base.css">
+    <link rel="stylesheet" href="../../static/css/contentv2_index.css">
+     <script src="../../static/js/jQuery.js"></script>
+    <link rel="stylesheet" href="../../static/css/contentv2_book_manage.css">
+
+
+</head>
+<body>
+<div class="wrap">
+     <div class="header">
+    <div class="headBox pageCenter cf">
+      <a href="/index.html">
+        <img class="logo fl" src="https://img1.write.qq.com/writer/p1/contentv2/logo.png" width="225" height="28" alt="阅文·作家专区">
+      </a>
+      <div class="headUser fr">
+        <ul class="cf">
+
+          <li class="line"></li>
+          <li id="headPhotoBox" class="headPhoto">
+            <p><em><img src="https://img1.write.qq.com/writer/p1/contentv2/photo_default.png" width="36" height="36" alt=""></em><a class="userName" href="javascript:">v1列子御风</a></p>
+            <dl class="userBox">
+              <cite class="icon whiteSj"></cite>
+              <dd class="userInfo hidden">
+                  <!-- 增加身份标识"ico-level",silver为白金作家，dashen为大神作家 -->
+                <p class="name" title="v1列子御风">v1列子御风
+
+                </p>
+                <p class="level">
+
+                <span><em style="width:70%">0/0</em></span></p>
+              </dd>
+              <dd class="link end"><a href="/public/logout.html">退出登录</a></dd>
+            </dl>
+          </li>
+        </ul>
+      </div>
+    </div>
+</div>
+</div>
+<!-- start banner -->
+
+<!-- end banner -->
+<!-- 黄条提示 -->
+<div id="warnTipBox" class="warningWrap" style="display:none;">
+    <div class="pageCenter">
+      <p><span class="icon alert"></span><span id="warnTip"></span></p>
+      <a id="warnTipCloseBtn" class="icon close" href="javascript:" title="关闭"></a></div>
+</div>
+<!--更改VIP管理密码-->
+<div id="modifyPwdPopup" class="popupWrap w380" style="display:none;">
+  <a data-node="closeBtn" class="icon closePopup" href="javascript:"></a>
+  <h3>更改VIP管理密码</h3>
+  <div class="popupBody p30">
+    <div class="popupContent">
+      <p>原密码</p>
+      <p class="mb20">
+        <input data-node="originalPwdInput" class="longInput" type="password" value="">
+      </p>
+      <p>新密码</p>
+      <p class="mb20">
+        <input data-node="newPwdInput" class="longInput" type="password" value="">
+        <i class="f12 c999">6~16位英文、数字或特殊字符</i>
+      </p>
+
+      <p>再次输入新密码</p>
+      <p class="mb20">
+        <input data-node="repeatNewPwdInput" class="longInput" type="password" value="">
+      </p>
+    </div>
+    <center class="confirmBtn">
+        <a data-node="submitBtn" class="button full" href="javascript:">提交</a>
+    </center>
+  </div>
+</div>
+    <div class="mainWrap pageCenter cf">
+        <div id="leftNav" class="mainLeft fl" style="visibility: visible;">
+            <div class="sideBar" id="main-bar">
+               <ul>
+                      <li>
+                        <a href="/authon/index.html"><span class="home"></span>专区首页</a>
+                    </li>
+                    <li class="act">
+                        <a href="/authon/novels.html"><span class="works"></span>作品管理</a>
+                    </li>
+                    <li><a href="/authon/takeindex.html"><span class="data-icon"></span>数据统计</a>
+                          <!-- start 工具栏提示 -->
+                                          </li>
+                    <!---->
+                    <li>
+                        <a href="/authon/income.html"><span class="income"></span>稿酬收入</a>
+                    </li>
+                      </ul>
+            </div>
+
+            <!-- start 小屏下的列表-->
+            <div class="sideBar min-bar" id="min-bar">
+                <ul>
+                    <li>
+                    <a class="min-link" href="/index.html"><span class="icon home"></span></a>
+                    <a class="expand" href="/index.html">专区首页</a>
+                    </li>
+                    <li class="act">
+                        <a class="min-link" href="/booknovels/novels.html"><span class="icon works"></span></a>
+                        <a class="expand" href="/booknovels/novels.html">作品管理</a>
+                    </li>
+
+                    <li>
+                        <a class="min-link" href="/booknovelsvip/takeindex.html"><span class="icon reserve"></span></a>
+                        <a class="expand" href="/booknovelsvip/takeindex.html">数据统计</a>
+                    </li>
+
+
+                    <li>
+                        <a class="min-link" href="/income/index.html"><span class="icon income"></span></a>
+                        <a class="expand" href="/income/index.html">稿酬收入</a>
+                    </li>
+                    <li>
+                        <a class="min-link" href="/labor.html"><span class="icon labour"></span></a>
+                        <a class="expand" href="/labor.html">劳务收入</a>
+                    </li>
+
+
+                    <li>
+                        <a class="min-link" href="/authors/authorconsultlist.html"><span class="icon counsel"></span></a>
+                        <a class="expand" href="/authors/authorconsultlist.html">作家咨询</a>
+                    </li>
+
+                    <li>
+                        <a class="min-link" href="/integral_exchange/exchange.html"><span class="icon exchange"></span></a>
+                        <a class="expand" href="/integral_exchange/exchange.html">积分兑换</a>
+                    </li>
+                    <li>
+                        <a class="min-link" href="/interactivechapter/index.html"><span class="icon active"></span></a>
+                        <a class="expand" href="/interactivechapter/index.html">互动管理</a>
+                    </li>
+
+                    <!--微信管理-->
+                </ul>
+            </div>
+            <!-- end 小屏下的列表-->
+
+        </div>
+
+<div class="mainRight pb260 fl">
+
+        <div class="crumbsWrap">
+        <b></b> <i class="before"><span><a href="/booknovels/novels.html">作品管理</a></span></i><em class="diff"></em>
+        <i class="current"><span>作品创建</span></i>
+    </div>
+
+    <center class="stepTitle">
+        <span class="act">1</span><em class="actText">选择类型</em><i class="icon"></i><span class="act">2</span><em class="actText">完善作品信息</em><i class="icon nogt"></i><span>3</span><em>创建成功</em>
+    </center>
+            <form name="formbooknovelsnew" id="formbooknovelsnew" method="post" action="/booksubmit/createbooksubmit.html" novalidate="novalidate">
+    <div class="workStepList step2">
+
+            <!-- 站点类型 -->
+            <input id="siteTypeHidden" name="site" type="hidden" value="1">
+            <input id="artidx" type="hidden" name="artidx" value="0">
+            <input id="selectid" type="hidden" name="selectid" value="0">
+           <ul>
+
+
+                <li> <em>作品名称</em>
+                    <input class="long" id="bookName" name="title" type="text" value="">
+                    <cite data-node="ok" class="icon ok" style="display:none;"></cite>
+                    <p data-node="tip" class="tip">15字内，请勿添加书名号等特殊符号</p>
+                    <p data-node="error" style="display:none;" class="error"></p>
+                </li>
+                 <li class="zIndexTop cf"><em>作品类型</em>
+                    <div class="selectBox cf">
+                        <!-- 主分类选择器 -->
+                        <select class="bigClass" id="novelMainCategorySelect" name="storyclass">
+
+                            <option value="20001">现代言情</option><option value="20005">古代言情</option><option value="20010">浪漫青春</option><option value="20014">玄幻言情</option><option value="20019">仙侠奇缘</option><option value="20028">悬疑灵异</option><option value="20032">科幻空间</option><option value="20037">游戏竞技</option><option value="20042">短篇小说</option><option value="20050">N次元</option>                 </select>
+
+                        <!-- 子分类选择器 -->
+                        <cite data-node="ok" class="icon ok" style="display:none;"></cite>
+                        <p data-node="error" style="display:none;" class="error"></p>
+                    </div>
+                    <p class="tag-intro" id="tag-intro"></p>
+                    <!-- 分类对应的活动条目容器 -->
+                    </li>
+               <li id="activityList" class="show-match-popup">
+                   <em>作品等级</em>
+                   <div class="selectBox cf">
+                    <select class="bigClass" id="freeSelect" name="storyclass">
+                   <option value="">免费</option><option value="20001">vip</option></select>
+                   </div>
+
+               </li>
+
+                <li> <em>作品标签</em>
+                    <div id="selectedNovelTagList" class="filterTagBox"></div>
+                    <input id="tagIdListHidden" name="taglistId" type="hidden" value="">
+                </li>
+
+                <!-- 云起站点特有 -->
+
+                    <div id="yqItemBox" style="display: none">
+                                                                </div>
+
+
+                <li><em>作品介绍</em>
+                    <textarea id="introduction" name="intro"></textarea>
+                    <cite data-node="ok" class="icon ok" style="display:none;"></cite>
+                    <p data-node="tip" class="tip">20~300字</p>
+                    <p data-node="error" style="display:none;" class="error"></p>
+                </li>
+                </ul>
+            <div class="stepBtn"> <a class="button" id="createNovelBtn" href="javascript:">创建作品</a> <a class="c999 f12" href="javascript:history.go(-1)">返回上一步</a> </div>
+<!--        <input type="hidden" name="__hash__" value="f2e67af656f74422b585849bd739156e_3e12653bc4d35018ab80d3460f4b99d6" /></form>-->
+    </div>
+
+    <input type="hidden" name="__hash__" value="f2e67af656f74422b585849bd739156e_3e12653bc4d35018ab80d3460f4b99d6"></form>
+
+    <!-- 作品标签选择浮层 -->
+    <div id="novelTagPopup" class="popupWrap popupTag" style="display:none;"> <a id="novelTagPopup_closeBtn" class="icon closePopup" href="javascript:" title="关闭"></a>
+        <h3>作品标签</h3>
+        <div class="tagFilterList">
+            <p>请选择最多4个作为您的作品标签，每类中限选一个：</p>
+<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 400px;"><ul id="novelTagPopup_tagList" style="overflow: hidden; width: auto; height: 400px;">
+                <li> <span>风格</span>
+                        <div class="tagFilter">
+                            <a data-tagid="31013" title="轻松" href="javascript:">轻松</a><a data-tagid="31014" title="爆笑" href="javascript:">爆笑</a><a data-tagid="31015" title="虐恋" href="javascript:">虐恋</a><a data-tagid="31016" title="治愈" href="javascript:">治愈</a><a data-tagid="31017" title="恶搞" href="javascript:">恶搞</a><a data-tagid="31018" title="开放式结局" href="javascript:">开放式结局</a><a data-tagid="31019" title="正剧" href="javascript:">正剧</a><a data-tagid="31020" title="生死大爱" href="javascript:">生死大爱</a><a data-tagid="31021" title="温馨清水" href="javascript:">温馨清水</a><a data-tagid="31022" title="囧文" href="javascript:">囧文</a><a data-tagid="31023" title="小白" href="javascript:">小白</a><a data-tagid="31024" title="宠文" href="javascript:">宠文</a><a data-tagid="31025" title="唯美" href="javascript:">唯美</a><a data-tagid="31026" title="暧昧" href="javascript:">暧昧</a><a data-tagid="31027" title="励志" href="javascript:">励志</a><a data-tagid="31028" title="甜文" href="javascript:">甜文</a><a data-tagid="31029" title="悲剧" href="javascript:">悲剧</a><a data-tagid="31030" title="铁血" href="javascript:">铁血</a><a data-tagid="31031" title="爽文" href="javascript:">爽文</a><a data-tagid="31032" title="轻小说" href="javascript:">轻小说</a><a data-tagid="31033" title="苦恋" href="javascript:">苦恋</a><a data-tagid="31034" title="暗黑" href="javascript:">暗黑</a><a data-tagid="31035" title="苏" href="javascript:">苏</a><a data-tagid="31512" title="浪漫" href="javascript:">浪漫</a><a data-tagid="31513" title="HE" href="javascript:">HE</a>                        </div>
+                    </li><li> <span>主角身份</span>
+                        <div class="tagFilter">
+                            <a data-tagid="31038" title="帝王" href="javascript:">帝王</a><a data-tagid="31039" title="暴君" href="javascript:">暴君</a><a data-tagid="31040" title="皇后" href="javascript:">皇后</a><a data-tagid="31041" title="王妃" href="javascript:">王妃</a><a data-tagid="31042" title="公主" href="javascript:">公主</a><a data-tagid="31043" title="君主" href="javascript:">君主</a><a data-tagid="31044" title="小妾" href="javascript:">小妾</a><a data-tagid="31045" title="王爷" href="javascript:">王爷</a><a data-tagid="31046" title="将军" href="javascript:">将军</a><a data-tagid="31047" title="丫鬟" href="javascript:">丫鬟</a><a data-tagid="31048" title="书童" href="javascript:">书童</a><a data-tagid="31049" title="盗贼" href="javascript:">盗贼</a><a data-tagid="31050" title="王子" href="javascript:">王子</a><a data-tagid="31051" title="总裁" href="javascript:">总裁</a><a data-tagid="31052" title="特工" href="javascript:">特工</a><a data-tagid="31054" title="世家" href="javascript:">世家</a><a data-tagid="31055" title="高干" href="javascript:">高干</a><a data-tagid="31056" title="替身" href="javascript:">替身</a><a data-tagid="31057" title="黑帮" href="javascript:">黑帮</a><a data-tagid="31058" title="明星" href="javascript:">明星</a><a data-tagid="31059" title="纨绔" href="javascript:">纨绔</a><a data-tagid="31064" title="老师" href="javascript:">老师</a><a data-tagid="31065" title="校花" href="javascript:">校花</a><a data-tagid="31066" title="校草" href="javascript:">校草</a><a data-tagid="31067" title="学生" href="javascript:">学生</a><a data-tagid="31068" title="女佣" href="javascript:">女佣</a>                      </div>
+                    </li><li> <span>主角形象</span>
+                        <div class="tagFilter">
+                            <a data-tagid="31106" title="扮猪吃虎" href="javascript:">扮猪吃虎</a><a data-tagid="31107" title="专情" href="javascript:">专情</a><a data-tagid="31109" title="花心" href="javascript:">花心</a><a data-tagid="31110" title="张扬" href="javascript:">张扬</a><a data-tagid="31111" title="萌系" href="javascript:">萌系</a><a data-tagid="31112" title="护短" href="javascript:">护短</a><a data-tagid="31113" title="可爱流" href="javascript:">可爱流</a><a data-tagid="31114" title="热血" href="javascript:">热血</a><a data-tagid="31116" title="玩世不恭" href="javascript:">玩世不恭</a><a data-tagid="31117" title="杀伐果断" href="javascript:">杀伐果断</a><a data-tagid="31118" title="宅腐" href="javascript:">宅腐</a><a data-tagid="31120" title="单纯" href="javascript:">单纯</a><a data-tagid="31122" title="腹黑" href="javascript:">腹黑</a><a data-tagid="31123" title="傲娇" href="javascript:">傲娇</a><a data-tagid="35007" title="独宠" href="javascript:">独宠</a><a data-tagid="35008" title="冰山" href="javascript:">冰山</a><a data-tagid="35009" title="毒舌" href="javascript:">毒舌</a><a data-tagid="35010" title="逗逼" href="javascript:">逗逼</a><a data-tagid="35011" title="吃货" href="javascript:">吃货</a>                        </div>
+                    </li><li> <span>故事流派</span>
+                        <div class="tagFilter">
+                            <a data-tagid="31127" title="穿越" href="javascript:">穿越</a><a data-tagid="31128" title="魂穿" href="javascript:">魂穿</a><a data-tagid="31129" title="清穿" href="javascript:">清穿</a><a data-tagid="31130" title="反穿越" href="javascript:">反穿越</a><a data-tagid="31131" title="重生" href="javascript:">重生</a><a data-tagid="31199" title="学院" href="javascript:">学院</a><a data-tagid="31203" title="古娱" href="javascript:">古娱</a><a data-tagid="31134" title="种田文" href="javascript:">种田文</a><a data-tagid="31135" title="随身流" href="javascript:">随身流</a><a data-tagid="31136" title="修仙" href="javascript:">修仙</a><a data-tagid="31137" title="美食" href="javascript:">美食</a><a data-tagid="31138" title="盗墓" href="javascript:">盗墓</a><a data-tagid="31139" title="鉴宝" href="javascript:">鉴宝</a><a data-tagid="31212" title="宝宝" href="javascript:">宝宝</a><a data-tagid="31214" title="宠物" href="javascript:">宠物</a><a data-tagid="31216" title="女强" href="javascript:">女强</a><a data-tagid="31143" title="复仇" href="javascript:">复仇</a><a data-tagid="31144" title="争霸" href="javascript:">争霸</a><a data-tagid="31219" title="契约" href="javascript:">契约</a><a data-tagid="31532" title="红楼" href="javascript:">红楼</a><a data-tagid="31159" title="变身" href="javascript:">变身</a><a data-tagid="31511" title="转世" href="javascript:">转世</a><a data-tagid="31521" title="书本穿" href="javascript:">书本穿</a><a data-tagid="31522" title="群穿" href="javascript:">群穿</a><a data-tagid="31523" title="系统流" href="javascript:">系统流</a><a data-tagid="31121" title="废柴流" href="javascript:">废柴流</a><a data-tagid="31192" title="养成" href="javascript:">养成</a><a data-tagid="31196" title="升级文" href="javascript:">升级文</a><a data-tagid="35012" title="赌石" href="javascript:">赌石</a><a data-tagid="35013" title="灵魂互换" href="javascript:">灵魂互换</a>                        </div>
+                    </li><li> <span>故事元素</span>
+                        <div class="tagFilter">
+                            <a data-tagid="31200" title="青梅竹马" href="javascript:">青梅竹马</a><a data-tagid="31202" title="白领浪漫" href="javascript:">白领浪漫</a><a data-tagid="31204" title="策马江湖" href="javascript:">策马江湖</a><a data-tagid="31205" title="乡村爱情" href="javascript:">乡村爱情</a><a data-tagid="31206" title="青楼宫廷" href="javascript:">青楼宫廷</a><a data-tagid="31207" title="豪门" href="javascript:">豪门</a><a data-tagid="31208" title="江湖恩怨" href="javascript:">江湖恩怨</a><a data-tagid="31211" title="选秀" href="javascript:">选秀</a><a data-tagid="31213" title="别后重逢" href="javascript:">别后重逢</a><a data-tagid="31215" title="平凡生活" href="javascript:">平凡生活</a><a data-tagid="31217" title="麻雀变凤凰" href="javascript:">麻雀变凤凰</a><a data-tagid="31218" title="家长里短" href="javascript:">家长里短</a><a data-tagid="31220" title="异国情缘" href="javascript:">异国情缘</a><a data-tagid="31221" title="姐弟恋" href="javascript:">姐弟恋</a><a data-tagid="31222" title="暗恋成真" href="javascript:">暗恋成真</a><a data-tagid="31223" title="日久生情" href="javascript:">日久生情</a><a data-tagid="31224" title="欢喜冤家" href="javascript:">欢喜冤家</a><a data-tagid="31227" title="乔装改扮" href="javascript:">乔装改扮</a><a data-tagid="31228" title="西方罗曼" href="javascript:">西方罗曼</a><a data-tagid="31229" title="午夜惊魂" href="javascript:">午夜惊魂</a><a data-tagid="31531" title="炮灰逆袭" href="javascript:">炮灰逆袭</a><a data-tagid="31533" title="代嫁" href="javascript:">代嫁</a><a data-tagid="31132" title="影视名家" href="javascript:">影视名家</a><a data-tagid="31140" title="生存奇遇" href="javascript:">生存奇遇</a><a data-tagid="31142" title="奋斗" href="javascript:">奋斗</a><a data-tagid="31145" title="相亲" href="javascript:">相亲</a><a data-tagid="31146" title="隐婚" href="javascript:">隐婚</a><a data-tagid="31147" title="裸婚" href="javascript:">裸婚</a><a data-tagid="31148" title="同居" href="javascript:">同居</a><a data-tagid="31149" title="待嫁" href="javascript:">待嫁</a><a data-tagid="31151" title="复合" href="javascript:">复合</a><a data-tagid="31152" title="军婚" href="javascript:">军婚</a><a data-tagid="31153" title="逃婚" href="javascript:">逃婚</a><a data-tagid="31154" title="花季雨季" href="javascript:">花季雨季</a><a data-tagid="31156" title="失忆" href="javascript:">失忆</a><a data-tagid="31157" title="斗智斗勇" href="javascript:">斗智斗勇</a><a data-tagid="31158" title="咸鱼翻身" href="javascript:">咸鱼翻身</a><a data-tagid="31524" title="全息" href="javascript:">全息</a><a data-tagid="31525" title="冒险" href="javascript:">冒险</a> </div>
+                    </li>            </ul><div class="slimScrollBar" style="background: rgb(204, 204, 204); width: 7px; position: absolute; top: 197px; opacity: 1; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 131.2px;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; border-radius: 7px; background: rgb(238, 238, 238); opacity: 1; z-index: 90; right: 1px; display: none;"></div></div>        </div>
+        <center class="confirmBtn">
+            <a id="novelTagPopup_confirmBtn" class="button" href="javascript:">确定</a>
+        </center>
+    </div>
+<img id="requestLoadingTip" class="loadImg" style="display:none;" src="https://img1.write.qq.com/writer/p1/contentv2/loading.gif"></div>
+<!-- start 交稿弹窗 -->
+
+<script src="../../static/js/view_js/authon_login_chek.js"></script>
+<script src="../../static/js/view_js/createbookw.js"></script>
+
+    </div>
+</div>
+</body>
+</html>

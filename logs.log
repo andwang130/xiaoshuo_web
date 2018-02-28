@@ -1,0 +1,12 @@
+[I 180228 20:33:42 web:2064] 304 GET /all.html (127.0.0.1) 277.74ms
+[I 180228 20:33:42 web:2064] 200 POST /longin_info (127.0.0.1) 2.01ms
+[I 180228 20:33:42 web:2064] 304 GET /getfreeall?type=all&page=1&book_sex=%E5%A5%B3%E7%94%9F&free=all&order_by=%E7%BB%BC%E5%90%88 (127.0.0.1) 33.10ms
+[I 180228 20:33:51 web:2064] 200 GET /getfreeall?type=all&page=1&book_sex=%E5%A5%B3%E7%94%9F&free=all&order_by=%E5%AD%97%E6%95%B0 (127.0.0.1) 9.02ms
+[I 180228 20:33:52 web:2064] 200 GET /getfreeall?type=all&page=1&book_sex=%E5%A5%B3%E7%94%9F&free=all&order_by=%E7%82%B9%E5%87%BB (127.0.0.1) 10.03ms
+[I 180228 20:33:52 web:2064] 200 GET /getfreeall?type=all&page=1&book_sex=%E5%A5%B3%E7%94%9F&free=all&order_by=%E6%97%B6%E9%97%B4 (127.0.0.1) 8.02ms
+[I 180228 23:15:50 web:2064] 304 GET /free.html (127.0.0.1) 14.04ms
+[I 180228 23:15:50 web:2064] 304 GET /static/css/Button.e5a3e.css (127.0.0.1) 10.03ms
+[I 180228 23:15:50 web:2064] 304 GET /static/js/view_js/login.js (127.0.0.1) 4.01ms
+[I 180228 23:15:50 web:2064] 304 GET /static/js/view_js/free.js (127.0.0.1) 2.53ms
+[I 180228 23:15:50 web:2064] 200 POST /longin_info (127.0.0.1) 7.02ms
+[I 180228 23:15:50 web:2064] 304 GET /getfreeall?order_by=%E7%BB%BC%E5%90%88&type=all&page=1&book_sex=%E5%A5%B3%E7%94%9F&free=%E5%85%8D%E8%B4%B9 (127.0.0.1) 22.56ms
